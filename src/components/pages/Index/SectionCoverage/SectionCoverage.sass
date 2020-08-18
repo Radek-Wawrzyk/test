@@ -1,0 +1,153 @@
+.section-coverage
+  position: relative
+  padding: 9rem 0
+  background-color: $c-bg-light
+
+  &__map
+    position: absolute
+    left: 0
+    top: 0
+    height: 520px
+    width: 100%
+    overflow: hidden
+    opacity: 0
+    transition: all $time
+
+    &--active
+      opacity: 1
+
+  &__content
+    margin: 3.5rem 0 5.6rem 0
+    text-align: center
+    height: 520px
+    position: relative
+
+    &-inner
+      width: auto
+      display: inline-block
+
+  &-tab
+    position: relative
+    text-align: left
+
+    &.base-tab-item--active
+      .section-coverage-tab__label
+        border-color: $c-brand-blue
+        color: $c-white
+        background-color: $c-brand-blue
+
+      .section-coverage-tab__heading
+        color: $c-black
+
+    .base-tab-item__button
+      display: flex
+      align-items: center
+      flex-wrap: wrap
+
+    &__label
+      font-family: Montserrat
+      font-style: normal
+      font-weight: bold
+      font-size: 14px
+      line-height: 17px
+      display: inline-flex
+      align-items: center
+      text-align: center
+      border: 2px solid transparent
+      border-radius: $border-radius
+      background-color: rgba($c-brand-blue, 0.2)
+      color: $c-brand-blue
+      padding: 0.375rem 0.625rem
+      margin: 0 0.9rem 0 0
+
+    &__text
+      margin: 0.8rem 0 0 0
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 150%;
+      color: rgba(#141A37, 0.6);
+
+    &__heading
+      font-family: Poppins
+      font-style: normal
+      font-weight: 500
+      font-size: 16px
+      line-height: 24px
+      color: rgba($c-black, 0.6)
+
+    &__text
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 0.95rem
+      line-height: 1.75rem
+      color: $text-color--medium;
+
+.map
+  &__marker
+    width: 5px
+    height: 5px
+
+    &-label
+      position: absolute
+      left: 1.6rem
+      top: 50%
+      transform: translateY(-50%)
+      padding: 0.5rem
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 0.9rem
+      line-height: 1rem
+      color: $c-white
+      white-space: nowrap
+      background: $c-brand-yellow
+      border-radius: $border-radius
+
+    &-dot
+      position: absolute
+      left: 50%
+      top: 50%
+      transform: translate(-50%, -50%)
+      width: 20px
+      height: 20px
+      border-radius: 50%
+      border: 2px solid $c-white
+      background-color: $c-brand-yellow
+
+@keyframes "pulse"
+  0%
+    transform: scale(0);
+    opacity: 0.0;
+
+  25%
+    transform: scale(0);
+    opacity: 0.1;
+
+  50%
+    transform: scale(0.1);
+    opacity: 0.3;
+
+  75%
+    transform: scale(0.5);
+    opacity: 0.5;
+
+  100%
+    transform: scale(1);
+    opacity: 0.0;
+
+@media screen and (max-width: 1024px)
+  .section-coverage
+    &__content
+      height: 50vw
+      margin: 2rem 0
+
+    &__map
+      height: 100%
+
+@media screen and (max-width: 576px)
+  .section-coverage
+    &__content
+      height: 70vw

@@ -1,0 +1,85 @@
+.platform-more
+  position: relative
+  padding: 9rem 0
+
+  &__header
+    max-width: 460px
+    width: 100%
+    margin: 0 auto 5.6rem auto
+
+  &__list
+    display: grid
+    // grid-template-columns: repeat(3, 1fr)
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-gap: 4rem 8rem
+    list-style: none
+    margin: 0
+    padding: 0
+
+  &__bottom
+    text-align: center
+    padding: 6rem 0 0 0
+
+  &__tile
+    width: 100%
+
+    &-icon
+      position: relative
+      display: block
+      width: 65px
+      height: 65px
+      min-width: 65px
+      z-index: 1
+      display: flex
+      align-items: center
+      justify-content: center
+      background: $c-brand-blue-light
+      border-radius: 50%
+      margin: 0 0 1.2rem 0
+
+    &-heading
+      font-family: Montserrat
+      font-style: normal
+      font-weight: bold
+      font-size: 20px
+      line-height: 28px
+      margin: 0 0 18px 0
+      color: $text-color
+
+    &-text
+      font-family: Poppins
+      font-style: normal
+      font-weight: 500
+      font-size: 15px
+      line-height: 28px
+      color: $text-color--medium
+
+    &-features
+      margin: 22px 0 0 0
+      padding: 0
+      list-style: none
+
+      &-item
+        display: flex
+        align-items: center
+
+      &-icon
+        margin: 0 20px 0 0
+
+      &-text
+        font-family: Poppins
+        font-style: normal
+        font-weight: 500
+        font-size: 15px
+        line-height: 28px
+        color: #141A37
+
+
+// Media
+
+@media screen and (max-width: 920px)
+  .platform-more
+    &__list
+      // grid-template-columns: repeat(2, 1fr)
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      grid-gap: 4rem 3rem

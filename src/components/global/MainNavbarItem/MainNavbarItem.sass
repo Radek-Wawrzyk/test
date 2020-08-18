@@ -1,0 +1,40 @@
+.main-navbar-item
+  position: relative
+  padding: 1rem 0.5rem
+
+  &__link
+    display: flex
+    align-items: center
+
+    &--no-menu
+      &:hover
+        color: lighten($c-brand-blue, 20%)
+
+  &__text
+    margin-right: 0.5rem
+
+  &__icon
+    position: relative
+    top: 1px
+    color: rgba($c-white, 0.8)
+
+  &__menu
+    display: none
+    position: absolute
+    z-index: 10
+    left: 0
+    top: 100%
+    padding: 1rem 1.5rem
+    background: $c-darker-bg
+    border-radius: $border-radius
+
+  &:hover &__menu
+    display: block
+
+  &__sublink
+    display: block
+    padding: 0.5rem
+    white-space: nowrap
+
+    &:hover
+      color: lighten($c-brand-blue, 20%)

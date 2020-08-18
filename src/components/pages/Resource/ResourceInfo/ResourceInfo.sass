@@ -1,0 +1,119 @@
+.resource-info
+  padding: 9rem 0
+  position: relative
+
+  &__mobile
+    display: none
+
+  &__inner
+    width: 100%
+    display: flex
+    align-items: flex-start
+
+  &__content
+    width: 100%
+
+    &-list
+      margin: 0
+      padding: 0
+      list-style: none
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+      gap: 3rem
+      grid-template-areas: "top top"
+
+    &-empty
+      text-align: center
+      padding: 2rem
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 1rem
+      color: rgba($c-black, 0.6)
+
+  &__tabs
+    max-width: 250px
+    margin: 0 5.6rem 0 0
+
+    &-item
+      position: relative
+      margin: 0 0 1.5rem 0
+      background-color: $c-bg-light
+      border-radius: $border-radius
+      padding: 2.5rem
+
+    &-heading
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 1.25rem
+      color: $c-black
+      margin: 0 0 2.25rem 0
+
+      &--mobile
+        display: none
+
+    .base-tabs__list
+      margin: 0
+
+    .base-tab-item--active .faq-info-tab__heading
+      color: $c-brand-blue
+      font-weight: 600
+
+  &-tab
+    position: relative
+    padding: 1.5rem 1rem !important
+
+    &:last-of-type
+      margin: 0
+
+    &__heading
+      color: $c-black
+      font-family: Poppins
+      font-style: normal
+      font-weight: normal
+      font-size: 1rem
+      line-height: 1.75rem
+
+// Media
+
+@media screen and (max-width: 1500px)
+  .resource-info
+    &__content
+      &-list
+        grid-gap: 1.5rem
+
+
+@media screen and (max-width: 1378px)
+  .resource-info
+    &__content
+      &-list
+        grid-gap: 1.5rem
+
+
+@media screen and (max-width: 1024px)
+  .resource-info
+    &__mobile
+      display: block
+
+    &__inner
+      flex-direction: column
+    &__tabs
+      display: none
+
+    &__content
+      &-list
+        grid-gap: 1.5rem
+
+@media screen and (max-width: 576px)
+  .resource-info
+    &__content
+      &-list
+        display: block
+
+        .resource-tile
+          margin: 0 0 2rem 0
+
+          &:last-child
+            margin: 0
+

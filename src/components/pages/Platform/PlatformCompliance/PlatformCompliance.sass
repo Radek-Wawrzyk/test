@@ -1,0 +1,52 @@
+.platform-compliance
+  position: relative
+  padding: 9rem 0
+  background-color: $c-bg-light
+
+  &__header
+    margin: 0 auto 6rem auto
+
+  &__listing
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-gap: 4rem
+    list-style: none
+    margin: 0
+    padding: 0
+
+  &__item
+    text-align: center
+
+    &-img
+      display: inline-block
+
+    &-heading
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: bold;
+      color: $c-black
+      font-size: 1.25rem
+      line-height: 1.75rem
+      margin: 1.5rem 0 2rem 0
+
+    &-text
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 0.9rem
+      line-height: 1.75rem
+      color: rgba($c-black, 0.6)
+
+// Media
+
+@media screen and (max-width: 1280px)
+  .platform-compliance
+    &__listing
+      grid-gap: 2rem
+
+@media screen and (max-width: 1024px)
+  .platform-compliance
+    &__listing
+      grid-gap: 4rem
+      align-content: center
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));

@@ -1,0 +1,133 @@
+.faq-info
+  position: relative
+  padding: 9rem 0
+
+  &__content
+    width: 100%
+    display: flex
+    align-items: flex-start
+
+    &-list
+      width: 100%
+
+  &__tabs
+    background-color: $c-bg-light
+    border-radius: $border-radius
+    max-width: 250px
+    margin: 0 5.6rem 0 0
+    padding: 2.5rem
+
+    &-heading
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 1.25rem
+      color: $c-black
+      margin: 0 0 2.25rem 0
+
+      &--mobile
+        display: none
+
+    .base-tabs__list
+      margin: 0
+
+    .base-tab-item--active .faq-info-tab__heading
+      color: $c-brand-blue
+      font-weight: 600
+
+  &-tab
+    position: relative
+    padding: 1.5rem 1rem !important
+
+    &:last-of-type
+      margin: 0
+
+    &__heading
+      color: $c-black
+      font-family: Poppins
+      font-style: normal
+      font-weight: normal
+      font-size: 1rem
+      line-height: 1.75rem
+
+  &-question
+    position: relative
+    width: 100%
+    margin: 0 0 0.625rem 0
+
+    .base-accordion-item__trigger--active .faq-info-question__icon
+      transform: translateY(-50%) rotate(0deg)
+
+    &__top
+      width: 100%
+      height: 100px
+      position: relative
+      display: flex
+      align-items: center
+      background-color: $c-bg-light
+      padding: 0 3rem
+      border: none
+      margin: 0
+      transition: all $time
+
+      &:hover, &:focus
+        cursor: pointer
+
+    &__label
+      color: $c-blue-light
+      font-size: 2.2rem
+      margin: 0 2.8rem 0 0
+      font-family: Poppins
+      font-style: normal
+      font-weight: bold
+
+    &__heading
+      font-family: Poppins
+      font-style: normal
+      font-weight: bold
+      font-size: 1.25rem
+      color: $c-black
+
+    &__icon
+      position: absolute
+      right: 3rem
+      top: 50%
+      transform: translateY(-50%) rotate(-90deg)
+      transition: all $time
+
+    &__content
+      padding: 1.4rem 3rem
+      font-family: Poppins
+      font-style: normal
+      font-weight: normal
+      font-size: 0.9rem
+      line-height: 28px
+      color: $c-black
+
+
+@media screen and (max-width: 1024px)
+  .faq-info
+    &__content
+      display: none
+
+    &__tabs
+      &-heading--mobile
+        display: block
+
+@media screen and (max-width: 480px)
+  .faq-info
+    &-question
+      &__top
+        padding: 1rem
+
+      &__label
+        margin: 0 1.5rem 0 0
+
+      &__heading
+        font-size: 1.1rem
+
+      &__icon
+        right: 1rem
+
+      &__content
+        padding: 1rem

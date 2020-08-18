@@ -1,0 +1,207 @@
+.features
+  position: relative
+  padding: 150px 0 200px 0
+  background-color: $c-bg-light
+
+  &--benefits
+    padding: 0 0 150px 0
+
+  &-content
+    position: relative
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+
+    &__info
+      position: sticky
+      top: 50px
+      width: 100%
+      max-width: 450px
+
+      &-header
+        width: 100%
+        max-width: 400px
+
+        &--green
+          .base-header__sub-heading
+            color: $c-brand-green !important
+
+      &-sub-text
+        font-family: Poppins
+        font-style: normal
+        font-weight: 500
+        font-size: 18px
+        line-height: 33px
+        color: $text-color
+        margin: 22px 0
+
+      &-text
+        font-family: Poppins
+        font-style: normal
+        font-weight: 500
+        font-size: 15px
+        line-height: 28px
+        color: $text-color--medium
+        margin: 0 0 35px 0
+
+    &__features
+      width: 100%
+      max-width: 500px
+
+      &--benefits
+        max-width: 520px
+
+  &-tile
+    position: relative
+    padding: 20px 0 90px 0
+    display: flex
+    align-items: flex-start
+
+    &--benefits
+      padding: 20px 0 20px 0
+
+    &:last-child
+      padding: 20px 0 0 0
+
+    &__content
+      padding: 15px 0 0 30px
+      width: 100%
+
+    &__icon
+      position: relative
+      display: block
+      width: 65px
+      height: 65px
+      min-width: 65px
+      z-index: 1
+      display: flex
+      align-items: center
+      justify-content: center
+      background: $c-brand-blue-light
+      border-radius: 50%
+      margin: 0
+
+      &--green
+        background: rgba($c-brand-green, 0.1)
+
+      &-inner
+        display: block
+        position: relative
+        z-index: 1
+
+    &__lines
+      position: absolute
+      left: 30px
+      top: 100px
+      width: 4px
+      height: calc(100% - calc(64px + 32px))
+      // object-fit: cover
+
+    &__heading
+      font-family: Poppins
+      font-style: normal
+      font-weight: bold
+      font-size: 1.25rem
+      line-height: 1.75rem
+      margin: 0 0 1.125rem 0
+      color: $text-color
+
+      &--more
+        font-size: 0.9375rem
+
+    &__text
+      font-family: Poppins
+      font-style: normal
+      font-weight: 500
+      font-size: 15px
+      line-height: 28px
+      color: $text-color--medium
+
+    &__features
+      margin: 22px 0 0 0
+      padding: 0
+      list-style: none
+
+      &-item
+        display: flex
+        align-items: center
+
+      &-icon
+        margin: 0 20px 0 0
+
+      &-text
+        font-family: Poppins
+        font-style: normal
+        font-weight: 500
+        font-size: 15px
+        line-height: 28px
+        color: #141A37
+
+// Media
+
+@media screen and (max-width: 1280px)
+  .features
+    &-content
+      &__features
+        &--benefits
+          max-width: 500px
+
+
+@media screen and (max-width: 1024px)
+  .features
+    padding: 100px 0 50px 0
+
+    &-content
+      flex-wrap: wrap
+      flex-direction: column
+      max-width: 800px
+      width: 100%
+
+      &__info
+        width: 100%
+        position: static
+        margin: 0 0 60px 0
+        order: -1 !important
+        max-width: 100%
+
+      &__features
+        max-width: 100%
+
+        &--benefits
+          max-width: 100%
+
+
+@media screen and (max-width: 576px)
+  .features
+    padding: 100px 0 50px 0
+
+    &-tile
+      &__icon
+        width: 45px
+        height: 45px
+        min-width: 45px
+
+        &-inner
+          width: 25px
+          height: 25px
+
+      &__text
+        font-size: 14px
+
+      &__content
+        padding: 8px 0 0 15px
+
+      &__lines
+        left: 19px
+        top: 50px
+        width: 5px
+
+      &__features
+        &-item
+          align-items: flex-start
+
+        &-icon
+          margin: 6px 10px 0 0
+
+        &-text
+          font-size: 14px

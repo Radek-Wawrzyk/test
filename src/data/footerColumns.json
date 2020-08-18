@@ -1,0 +1,176 @@
+[
+  {
+    "title": "Lottify",
+    "items": [
+      {
+        "label": "Platform",
+        "url": "/platform",
+        "new": false,
+        "external": false
+      },
+      {
+        "label": "Markets",
+        "url": "/markets",
+        "new": true,
+        "external": false
+      },
+      {
+        "label": "Customers",
+        "url": "/customers",
+        "new": false,
+        "external": false
+      },
+      {
+        "label": "Resources",
+        "url": "/resources",
+        "new": false,
+        "external": false
+      }
+    ]
+  },
+  {
+    "title": "Platform",
+    "items": [
+      {
+        "label": "Why Lottify?",
+        "url": "/platform#why-lottify",
+        "new": false,
+        "external": false
+      },
+      {
+        "label": "Features",
+        "url": "/platform#features",
+        "new": false,
+        "external": false
+      },
+      {
+        "label": "Benefits",
+        "url": "/platform#benefits",
+        "new": false,
+        "external": false
+      },
+      {
+        "label": "Architecture",
+        "url": "/platform#architecture",
+        "new": false,
+        "external": false
+      },
+      {
+        "label": "Compliance",
+        "url": "/platform#compliance",
+        "new": false,
+        "external": false
+      },
+      {
+        "label": "Developers",
+        "url": "/platform#developers",
+        "new": false,
+        "external": false
+      }
+    ]
+  },
+  {
+    "title": "Resources",
+    "items": [
+      {
+        "label": "Resource Center",
+        "url": "/resource-center",
+        "new": false,
+        "external": false
+      },
+      {
+        "label": "Blog",
+        "url": "/blog",
+        "new": false,
+        "external": false
+      },
+      {
+        "label": "FAQ",
+        "url": "/faq",
+        "new": false,
+        "external": false
+      },
+      {
+        "label": "Developer Docs",
+        "url": "/developers",
+        "new": false,
+        "external": false
+      },
+      {
+        "label": "API Reference",
+        "url": "/api-reference",
+        "new": true,
+        "external": false
+      }
+    ]
+  },
+  {
+    "title": "Get started",
+    "items": [
+      {
+        "label": "Sign in",
+        "url": "/sing-in",
+        "new": false,
+        "external": false
+      },
+      {
+        "label": "Sign up for free",
+        "url": "/sign-up-for-free",
+        "new": false,
+        "external": false
+      },
+      {
+        "label": "Schedule a demo",
+        "url": "/schedule-a-demo",
+        "new": false,
+        "external": false
+      }
+    ]
+  },
+  {
+    "title": "Company",
+    "items": [
+      {
+        "label": "Who we are",
+        "url": "/who-we-are",
+        "new": false,
+        "external": false
+      },
+      {
+        "label": "Contact",
+        "url": "/contact",
+        "new": false,
+        "external": false
+      },
+      {
+        "label": "About",
+        "url": "https://www.dreamit.de/en/about",
+        "new": false,
+        "external": true
+      },
+      {
+        "label": "Career",
+        "url": "https://www.dreamit.de/jobs",
+        "new": false,
+        "external": true
+      }
+    ]
+  },
+  {
+    "title": "Legal",
+    "items": [
+      {
+        "label": "Legal Note",
+        "url": "/legal-note",
+        "new": false,
+        "external": false
+      },
+      {
+        "label": "Privacy Policy",
+        "url": "/privacy-policy",
+        "new": false,
+        "external": false
+      }
+    ]
+  }
+]

@@ -1,0 +1,84 @@
+.platform-benefits
+  padding: 9rem 0
+  background-color: $c-dark-bg
+
+  &__header
+    margin: 0 auto 6rem auto
+
+  &-carousel
+    width: auto
+    overflow-x: hidden
+    overflow-y: hidden
+    cursor: grab
+
+    &__actions
+      width: 100%
+      justify-content: center
+      align-items: center
+      display: flex
+
+      &-button
+        border: 0
+        background: none
+        cursor: pointer
+
+        &:first-child
+          margin: 0 6.25rem 0 0
+
+    &__inner
+      display: flex
+      flex-direction: column
+      transition: all $time
+
+    &__row
+      width: 100%
+      display: flex
+      align-items: stretch
+
+      &--bottom
+        .platform-benefits-slide
+          &:first-child
+            margin: 0 3.2rem 3.2rem 16rem
+
+  &-slide
+    display: flex
+    align-items: flex-start
+    padding: 1.625rem
+    margin: 0 3.2rem 3.2rem 0
+    border: 2px solid rgba($c-brand-green, 0.8)
+    border-radius: $border-radius
+    min-height: 230px
+    width: auto
+
+    &__icon
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 65px
+      height: 65px
+      margin: 0 1.5rem 0 0
+      background-color: rgba(64, 112, 197, 0.1);
+      border-radius: 50%
+
+    &__inner
+      margin-top: 0 !important
+      margin-bottom: 40px
+      max-width: 600px
+      min-width: 300px
+
+    &__heading
+      color: $c-white
+      margin: 0 0 0.625rem 0
+      font-family: Poppins
+      font-style: normal
+      font-weight: bold
+      font-size: 1.25rem
+      line-height: 1.75rem
+
+    &__text
+      font-family: Poppins
+      font-style: normal
+      font-weight: 500
+      font-size: 0.85rem
+      line-height: 1.75rem
+      color: rgba($c-white, 0.6)

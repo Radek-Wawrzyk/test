@@ -1,0 +1,130 @@
+.platform-features
+  position: relative
+  padding: 9rem 0
+  background-color: $c-bg-light
+
+  &-content
+    position: relative
+    display: flex
+    justify-content: space-between
+    text-align: left
+
+    &__img
+      width: 100%
+      max-width: 640px
+
+    &__tile
+      padding: 3rem 0 0 0
+      max-width: 520px
+      width: 100%
+      display: flex
+
+      &-content
+        margin: 0.8rem 0 0 1.8rem
+
+      &-icon
+        position: relative
+        display: block
+        width: 65px
+        height: 65px
+        min-width: 65px
+        z-index: 1
+        display: flex
+        align-items: center
+        justify-content: center
+        background: $c-brand-blue-light
+        border-radius: 50%
+        margin: 0
+
+      &-heading
+        font-family: Poppins
+        font-style: normal
+        font-weight: bold
+        font-size: 1.25rem
+        line-height: 1.75rem
+        margin: 0 0 1.125rem 0
+        color: $text-color
+
+      &-text
+        font-family: Poppins
+        font-style: normal
+        font-weight: 500
+        font-size: 0.9375rem
+        line-height: 1.75rem
+        color: rgba($c-black, 0.6)
+
+      &-features
+        margin: 22px 0 0 0
+        padding: 0
+        list-style: none
+
+        &-item
+          display: flex
+          align-items: center
+
+        &-icon
+         margin: 0 20px 0 0
+
+        &-text
+          font-family: Poppins
+          font-style: normal
+          font-weight: 500
+          font-size: 15px
+          line-height: 28px
+          color: #141A37
+
+  &__header
+    width: 100%
+    max-width: 420px
+
+    .base-header__text
+      color: $c-black
+      font-size: 1.1rem
+      font-weight: 600
+
+  &__content
+    margin: 4.2em 0 5.6rem 0
+    text-align: center
+
+    &-inner
+      width: auto
+      display: inline-block
+
+  &-tab
+    position: relative
+    text-align: left
+
+    .base-tab-item__button
+      padding: 0 1rem
+      text-align: center
+
+    &.base-tab-item--active
+      .platform-features-tab__label
+        color: $c-brand-blue
+
+    &__heading
+      font-family: Poppins
+      font-style: normal
+      font-weight: bold
+      font-size: 1rem
+      line-height: 2.8rem
+      color: $text-color--dark
+
+@media screen and (max-width: 1024px)
+  .platform-features
+    &-content
+      flex-direction: column
+      // align-items: center
+
+      &__img
+        width: 100%
+
+      &__tile
+        width: 100%
+        max-width: 100%
+
+@media screen and (max-width: 576px)
+  .section-coverage
+    &__map
+      height: 70vw
+      margin: 2rem 0

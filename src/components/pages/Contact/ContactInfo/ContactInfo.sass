@@ -1,0 +1,70 @@
+.contact-info
+  position: relative
+  padding: 9rem 0
+  background-color: $c-bg-light
+
+  .base-header__sub-heading
+    margin: 0 0 0.8rem 0
+
+  &__map
+    position: absolute
+    right: 0
+    top: 0
+    display: block
+    width: 58%
+    height: 100%
+    background-color: gray
+    pointer-events: none
+
+  &__header
+    margin: 0 0 3rem 0
+
+  &__content
+    max-width: 300px
+    width: 100%
+
+  &__list
+    list-style: none
+    margin: 0
+    padding: 0
+
+  &__item
+    position: relative
+    margin: 0 0 2rem 0
+    display: flex
+
+    &-icon
+      margin: 0 1.5rem 0 0
+      width: 24px
+      height: 24px
+      min-width: 24px
+
+    &-content
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 0.95rem
+      line-height: 1.4rem
+      color: $c-black
+
+@media screen and (max-width: 1280px)
+  .contact-info
+    padding: 6rem 0
+
+@media screen and (max-width: 1024px)
+  .contact-info
+    padding: 6rem 0 0 0
+    &__map
+      margin: 4rem 0 0 0
+      width: 100%
+      position: static
+      height: 60vw
+
+    &__content
+      margin: 0 auto
+      max-width: 600px
+
+@media screen and (max-width: 576px)
+  .contact-info
+    &__map
+      height: 90vw

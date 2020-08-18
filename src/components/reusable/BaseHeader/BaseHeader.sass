@@ -1,0 +1,49 @@
+.base-header
+  position: relative
+
+  &--dark
+    .base-header__sub-heading
+      color: $c-brand-green
+
+    .base-header__heading
+      color: $c-white
+
+    .base-header__text
+      color: rgba($c-white, 0.6)
+
+  &--left
+    text-align: left
+
+  &--right
+    text-align: right
+
+  &--center
+    text-align: center
+
+  &__sub-heading
+    display: inline-block
+    font-family: Poppins
+    font-size: 15px
+    font-style: normal
+    font-weight: 600
+    letter-spacing: 0.12em
+    line-height: 150%
+    margin: 0 0 1.2rem 0
+    color: $c-brand-blue
+    text-transform: uppercase
+
+  &__heading
+    font-family: Montserrat
+    font-style: normal
+    font-weight: bold
+    font-size: 28px
+    line-height: 150%
+    color: $text-color
+    margin: 0 0 1.5rem 0
+
+  &__text
+    color: $text-color--medium
+    font-size: 15px
+    line-height: 28px
+    font-family: Poppins
+    font-style: normal

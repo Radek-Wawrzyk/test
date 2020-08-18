@@ -1,0 +1,149 @@
+.market-header
+  position: relative
+
+  .main-header__text
+    max-width: 100%
+
+  .main-header__info
+    padding: 0 0 0 5rem
+
+  &-info
+    position: relative
+
+    &__marker
+      position: absolute
+      display: block
+      width: 20px
+      height: 20px
+      background-color: $c-brand-yellow
+      border: 2px solid $c-white
+      border-radius: 50%
+
+      &::before
+        content: ''
+        position: absolute
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%)
+        width: 20px
+        height: 20px
+        border: 8px solid rgba($c-brand-yellow, 0.4)
+        border-radius: 50%
+        animation: fade-pulse 1.5s linear infinite
+
+      &::after
+        content: ''
+        position: absolute
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%)
+        width: 20px
+        height: 20px
+        border: 20px solid rgba($c-brand-yellow, 0.2)
+        border-radius: 50%
+        background-color: transparent
+        animation: fade-pulse 1.5s linear infinite
+        animation-delay: 0.5s
+
+  &-content
+    position: relative
+
+    &__form
+      position: relative
+      width: 100%
+      display: block
+
+      &-inputs
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-gap: 2rem
+        margin: 0 0 1.625rem 0
+
+      &-input
+        .base-input__inner, .base-select__inner
+          background-color: transparent
+          border-color: rgba($c-white, 0.6)
+          color: rgba($c-white, 0.6) !important
+
+          &::placeholder
+            color: rgba($c-white, 0.6)
+
+        .base-input__icon path
+          stroke: $c-white
+
+        .base-option__inner
+          background-color: rgba($c-brand-blue, 0.8)
+          background-color: $c-dark-bg
+          color: $c-white
+
+          &:hover, &:focus
+            background-color: none
+
+
+        .base-select
+          &__content
+            background-color: $c-dark-bg
+            border: 2px solid rgba($c-white, 0.6)
+            border: 2px solid $c-brand-blue
+
+    &__button
+      width: 100%
+
+    &__text
+      margin: 0.9rem 0 0 0
+      font-family: Poppins
+      font-style: normal
+      font-weight: 500
+      font-size: 0.625rem
+      line-height: 1rem
+      color: rgba($c-white, 0.6)
+
+      &-link
+        color: rgba($c-white, 0.6)
+        text-decoration: underline
+        transition: all $time
+
+        &:hover, &:focus
+          color: $c-blue-light
+
+// Media
+
+@media screen and (max-width: 1024px)
+  .market-header
+    .main-header__info
+      padding: 0
+
+    &-info
+      &__map
+        width: 100%
+
+@media screen and (max-width: 480px)
+  .market-header
+    &-info
+      &__marker
+        width: 12px
+        height: 12px
+
+        &::before
+          width: 12px
+          height: 12px
+
+        &::after
+          width: 12px
+          height: 12px
+
+    &-content
+      &__form
+        &-inputs
+          grid-template-columns: repeat(1, 1fr)
+
+
+@keyframes fade-pulse
+  0%
+    opacity: 0
+
+  50%
+    opacity: 1
+
+  100%
+    opacity: 0

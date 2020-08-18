@@ -1,0 +1,136 @@
+.privacy-settings
+  position: relative
+  padding: 9rem 0
+
+  &-item
+    position: relative
+    margin: 0 0 9rem 0
+
+    &__header
+      width: 100%
+      max-width: 640px
+      position: relative
+      margin: 0 0 3.5rem 0
+
+    &__heading
+      font-family: Poppins
+      font-style: normal
+      font-weight: bold
+      font-size: 1.75rem
+      line-height: 3rem
+      margin: 0 0 1.5rem 0
+      color: $c-black
+
+    &__text
+      font-family: Poppins
+      font-style: normal
+      font-weight: 500
+      font-size: 0.95rem
+      line-height: 1.75rem
+      color: rgba($c-black, 0.6)
+
+  &-actions
+    display: flex
+    justify-content: center
+
+    &__button
+      width: 220px
+
+  &-table
+    position: relative
+    display: flex
+
+    &__column
+      position: relative
+      border-bottom: 1px solid $c-bg-medium
+
+      &--providers
+        min-width: 310px
+
+    &__provider
+      color: $c-brand-blue
+      font-family: Poppins
+      font-style: normal
+      font-weight: bold
+      font-size: 1.5rem
+      line-height: 2.25rem
+
+    &__checkbox
+      margin: 10px 0 0 0
+
+      .base-checkbox__indicator--checkbox
+        background-color: $c-bg-light
+        border: 1px solid $c-bg-medium
+
+    &__heading
+      font-family: Poppins
+      font-style: normal
+      font-weight: 600
+      font-size: 0.95rem
+      line-height: 1.75rem
+      color: $c-black
+      height: 100px
+      display: flex
+      align-items: center
+      padding: 0 3rem
+      background-color: $c-bg-light
+
+    &__content
+      display: flex
+      align-items: center
+      color: rgba($c-black, 0.5)
+      font-family: Poppins
+      font-style: normal
+      font-weight: 500
+      font-size: 0.95rem
+      line-height: 1.75rem
+      padding: 1.5rem 3rem
+      height: calc(100% - 100px)
+
+
+@media screen and (max-width: 1280px)
+  .privacy-settings
+    &-table
+      &__column
+        &--providers
+          min-width: 160px
+
+@media screen and (max-width: 1024px)
+  .privacy-settings
+    &-table
+      flex-direction: column
+
+      &__column
+        display: flex
+        border-bottom: none
+        border-bottom: 1px solid $c-bg-medium
+
+      &__heading
+        align-items: flex-start
+        width: 150px
+        min-width: 150px
+        padding: 1.5rem 2rem
+        height: auto
+
+      &__content
+        width: 100%
+
+@media screen and (max-width: 640px)
+  .privacy-settings
+    &-table
+
+      &__column
+        flex-wrap: wrap
+        width: 100%
+        border-bottom: none
+
+      &__heading
+        width: 100%
+        align-items: flex-start
+        padding: 1.5rem 1rem
+
+      &__content
+        width: 100%
+        padding: 1.5rem 1rem
+        height: auto
+

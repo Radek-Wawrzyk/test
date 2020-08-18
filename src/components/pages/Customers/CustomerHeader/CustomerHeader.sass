@@ -1,0 +1,74 @@
+.customer-header
+  position: relative
+
+  .main-header__heading
+    font-size: 1.75rem
+    line-height: 2.625rem
+
+  .main-header__content
+    max-width: 600px
+
+  .main-header__info
+    width: calc(100% - 600px)
+    padding: 0 0 0 8rem
+
+  .main-header__text
+    max-width: 500px
+    font-size: 0.9375rem
+    font-weight: 500
+    margin: 0 0 4rem 0
+
+  &__inner
+
+  &__content
+    display: flex
+    align-items: center
+
+    &-button
+      &:first-child
+        margin: 0 2.5rem 0 0
+
+
+// Media
+
+@media screen and (max-width: 1560px)
+  .customer-header
+    .main-header__container
+      align-items: center
+
+    .main-header__info
+      width: 50%
+      padding: 0 0 0 2rem
+
+
+@media screen and (max-width: 1024px)
+  .customer-header
+    &__content
+      justify-content: center
+
+    &__info
+      &-img
+        margin: 0 auto
+
+    .main-header
+      &__top-img
+        margin: 0 auto 1.5rem auto
+
+      &__info
+        width: 100%
+        padding: 0
+
+      &__text
+        max-width: 100%
+
+
+@media screen and (max-width: 480px)
+  .customer-header
+    &__content
+      flex-direction: column
+
+      &-button
+        width: 100%
+
+        &:first-child
+          margin: 0 0 1.5rem 0

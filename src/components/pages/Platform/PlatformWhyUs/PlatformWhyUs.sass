@@ -1,0 +1,101 @@
+.platform-why
+  position: relative
+  padding: 9rem 0
+
+  &__header
+    max-width: 500px
+    margin: 0 auto 3.5rem auto
+
+  &__content
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-gap: 2rem
+
+    &--mobile
+      display: none
+
+  &-question
+    position: relative
+    width: 100%
+    margin: 0 0 0.8rem 0
+
+    &:last-child
+      margin: 0
+
+    .base-accordion-item__trigger--active .platform-why-question__icon
+      transform: translateY(-50%) rotate(0deg)
+
+    &__top
+      width: 100%
+      height: 100px
+      position: relative
+      display: flex
+      align-items: center
+      background-color: $c-bg-light
+      padding: 0 3rem
+      border: none
+      margin: 0
+      transition: all $time
+
+      &:hover, &:focus
+        cursor: pointer
+
+    &__label
+      color: $c-blue-light
+      font-size: 2.2rem
+      margin: 0 2.8rem 0 0
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: bold;
+
+    &__heading
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 1.25rem
+      color: $c-black
+
+    &__icon
+      position: absolute
+      right: 3rem
+      top: 50%
+      transform: translateY(-50%) rotate(-90deg)
+      transition: all $time
+
+    &__content
+      padding: 1.4rem 3rem
+      font-family: Poppins
+      font-style: normal
+      font-weight: normal
+      font-size: 0.9rem
+      line-height: 28px
+      color: $c-black
+
+// Media
+
+@media screen and (max-width: 920px)
+  .platform-why
+    &__content
+      display: none
+
+      &--mobile
+        display: block
+
+
+@media screen and (max-width: 480px)
+  .platform-why
+    &-question
+      &__top
+        padding: 1rem
+
+      &__label
+        margin: 0 1.5rem 0 0
+
+      &__heading
+        font-size: 1.1rem
+
+      &__icon
+        right: 1rem
+
+      &__content
+        padding: 1rem

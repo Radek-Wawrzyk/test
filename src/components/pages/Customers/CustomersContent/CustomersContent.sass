@@ -1,0 +1,171 @@
+.customers-content
+  padding: 0 0 9rem 0
+  position: relative
+
+  &__top-header
+    .sub-header__container
+      padding: 256px 2rem calc(7.5rem + 200px) 2rem
+
+  &-header
+    margin: -200px auto 0 auto
+    z-index: 1
+    width: 100%
+    max-width: 700px
+    height: 400px
+    position: relative
+    overflow: hidden
+    border-radius: $border-radius
+
+    &__img
+      position: absolute
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+      object-fit: cover
+      z-index: -1
+      filter: brightness(0.6)
+
+    &__label
+      position: absolute
+      left: 2rem
+      top: 2rem
+      height: 28px
+      display: flex
+      align-items: center
+      justify-content: center
+      text-align: center
+      padding: 0 0.6rem
+      background-color: $c-brand-blue
+      border-radius: $border-radius
+      font-family: Poppins
+      font-style: normal
+      font-weight: bold
+      font-size: 0.9rem
+      color: $c-white
+      text-transform: uppercase
+
+    &__info
+      position: absolute
+      left: 2rem
+      bottom: 2rem
+      width: calc(100% - 4rem)
+      display: flex
+      justify-content: space-between
+      align-items: flex-end
+
+    &__link
+      &.base-button
+        &:hover, &:focus
+          .base-button__text
+            color: $c-white !important
+
+        .base-button__text
+          color: $c-white
+
+        .base-button__icon-right
+          margin: 0 0 0 0.8rem
+
+    &__name
+      width: 100%
+      max-width: 350px
+      color: $c-white
+      font-family: Poppins
+      font-style: normal
+      font-weight: bold
+      font-size: 1.25rem
+      line-height: 1.875rem
+
+  &-companies
+    display: grid
+    grid-template-columns: repeat(6, 1fr)
+    grid-gap: 4.25rem
+    align-items: stretch
+    padding: 3rem 4.5rem
+    background-color: $c-bg-light
+    border-radius: $border-radius
+    list-style: none
+    margin: 8rem 0
+
+    &__item
+
+    &__logo
+      object-fit: cover
+      width: 100%
+
+    &__text
+      height: 100%
+      display: flex
+      align-items: center
+      color: $c-black
+      white-space: nowrap
+      font-family: Poppins
+      font-style: normal
+      font-weight: 500
+      font-size: 0.9375rem
+
+      &--mobile
+        text-align: center
+        display: none
+
+  &__list
+    display: grid
+    // grid-template-columns: repeat(3, 1fr)
+    grid-template-columns: repeat(auto-fit, minmax(430px, 1fr))
+    grid-gap: 4rem
+    margin: 0
+    padding: 0
+    width: 100%
+
+  &__actions
+    margin: 8rem 0 0 0
+    display: flex
+    align-items: center
+    justify-content: center
+
+// Media
+
+@media screen and (max-width: 1280px)
+  .customers-content
+    &-companies
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr))
+      margin: 0 0 8rem 0
+
+      &__text--mobile
+        display: block
+        margin: 4rem 0
+
+      &__item
+        &:first-child
+          display: none
+
+@media screen and (max-width: 768px)
+  .customers-content
+    &-companies
+      grid-template-columns: repeat(auto-fit, minmax(80px, 1fr))
+      grid-gap: 4rem
+      padding: 1.5rem 2rem
+
+@media screen and (max-width: 640px)
+  .customers-content
+    &__list
+      grid-template-columns: repeat(1, 1fr)
+
+    &__top-header
+      .sub-header__container
+        padding: 16rem 2rem 7.5rem 2rem
+
+    &-header
+      margin: 9rem 0 2rem 0 !important
+
+      &__info
+        flex-direction: column
+        align-items: flex-start
+
+
+
+@media screen and (max-width: 576px)
+  .customers-content
+    &__top-header
+      .sub-header__container
+        padding: 10rem 1rem 6rem 1rem

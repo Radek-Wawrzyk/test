@@ -1,0 +1,204 @@
+.customer-content
+  padding: 9rem 0
+  position: relative
+
+  &__container
+    display: flex
+    align-items: flex-start
+
+  &-stats
+    position: relative
+    width: 100%
+    max-width: 480px
+    position: sticky
+    top: 100px
+    background-color: $c-bg-medium-light
+    padding: 4rem 3rem
+    border-radius: $border-radius
+
+    &__heading
+      font-family: Poppins
+      font-style: normal
+      font-weight: bold
+      font-size: 1.75rem
+      line-height: 2rem
+      text-align: center
+
+    &__list
+      list-style: none
+      margin: 0
+      padding: 0
+      display: grid
+      grid-template-columns: repeat(3, 1fr)
+      grid-gap: 2rem
+      margin: 4rem 0
+
+    &__img
+      width: 65px
+      height: 65px
+      background-color: rgba($c-brand-blue, 0.1)
+      border-radius: 50%
+      display: flex
+      align-items: center
+      justify-self: center
+      margin: 0 auto 1.5rem auto
+
+    &__text
+      text-align: center
+      font-family: Poppins
+      font-style: normal
+      font-weight: normal
+      font-size: 0.875rem
+      line-height: 1.25rem
+      color: rgba($text-color--dark, 0.6)
+
+    &__actions
+      display: flex
+      justify-content: center
+
+  &-inner
+    width: calc(100% - 480px)
+    padding: 0 0 0 8rem
+
+    &__heading
+      display: inline-block
+      font-family: Poppins
+      font-size: 0.9375rem
+      font-style: normal
+      font-weight: 600
+      letter-spacing: 0.12em
+      line-height: 150%
+      margin: 0 0 1.2rem 0
+      color: $c-brand-blue
+      text-transform: uppercase
+
+
+
+// Wysigwn styles
+
+.customer-content-inner__content
+  ol
+    padding: 0 0 0 2rem
+    margin: 0 0 0 0
+
+    li
+      position: relative
+      font-weight: 600
+      margin: 0 0 3rem 0
+      font-family: Poppins
+      font-style: normal
+      font-weight: 500
+      font-size: 0.95rem
+      line-height: 1.75rem
+      color: rgba($c-black, 0.6)
+
+  ul
+    padding: 0 0 0 2rem
+    margin: 0
+    list-style: none
+
+    li
+      position: relative
+      font-weight: 600
+      margin: 0 0 1rem 0
+      font-family: Poppins
+      font-style: normal
+      font-weight: 500
+      font-size: 0.95rem
+      line-height: 1.75rem
+      color: rgba($c-black, 0.6)
+
+      &::before
+        content: ''
+        position: absolute
+        left: -1.5rem
+        top: 10px
+        display: inline-block
+        width: 8px
+        height: 8px
+        border-radius: 50%
+        background-color: $c-brand-blue
+
+  p
+    font-family: Poppins
+    font-style: normal
+    font-weight: 500
+    font-size: 0.9375rem
+    line-height: 1.75rem
+    color: rgba($c-black, 0.6)
+    margin: 0 0 1rem 0
+
+  b
+    font-weight: 600
+
+  h1, h2, h3, h4, h5, h6
+    color: $c-black
+    margin: 0 0 1rem 0
+
+  img
+    border-radius: $border-radius
+    margin: 4rem 0
+
+  blockquote
+    position: relative
+    font-family: Poppins
+    font-style: normal
+    font-weight: 500
+    font-size: 0.875rem
+    line-height: 1.75rem
+    color: rgba($c-black, 0.6)
+    padding: 0 0 0 3rem
+    margin: 2rem 0
+
+    &::before
+      content: "“"
+      position: absolute
+      left: 0
+      top: 1rem
+      font-family: Montserrat
+      font-style: normal
+      font-weight: bold
+      font-size: 4rem
+      line-height: 1.75rem
+      color: rgba($c-brand-blue, 0.6)
+
+// Media
+
+@media screen and (max-width: 1280px)
+  .customer-content
+    &-inner
+      padding: 0 0 0 4rem
+      width: calc(100% - 320px)
+
+    &-stats
+      max-width: 320px
+
+      &__list
+        grid-template-columns: repeat(2, 1fr)
+
+
+@media screen and (max-width: 1024px)
+  .customer-content
+    &__container
+      flex-direction: column
+
+    &-inner
+      padding: 0 0 4rem 0
+      width: 100%
+
+    &-stats
+      max-width: 480px
+      position: static
+      order: 1
+      margin: 0 auto
+
+      &__list
+        grid-template-columns: repeat(3, 1fr)
+
+
+@media screen and (max-width: 480px)
+  .customer-content
+    &-stats
+      padding: 2rem 1.5rem
+      &__list
+         grid-template-columns: repeat(auto-fit, minmax(120px, 1fr))

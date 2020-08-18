@@ -1,0 +1,75 @@
+.mobile-tabs
+  position: relative
+  display: none
+  margin: 2rem 0 0 0
+
+  &__list
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    list-style: none
+    margin: 0
+    padding: 0
+
+  &__item
+    margin: 0 1rem 1rem 0
+    position: relative
+
+    &-button
+      width: 40px
+      height: 34px
+      background: rgba($c-brand-blue, 0.1)
+      border-radius: $border-radius
+      display: flex
+      align-items: center
+      justify-content: center
+      text-align: center
+      border: none
+      transition: all $time
+      font-family: Poppins
+      font-style: normal
+      font-weight: bold
+      font-size: 0.9rem
+      color: $c-brand-blue
+
+      &--dark
+        background: rgba($c-brand-green, 0.1)
+        color: $c-brand-green
+
+        &.mobile-tabs__item-button--active
+          background: $c-brand-green
+
+      &--active
+        color: $c-white
+        background: $c-brand-blue
+
+      &:hover, &:focus
+        opacity: 0.7
+        cursor: pointer
+
+  &__selected-name
+    font-family: Poppins
+    font-style: normal
+    font-weight: bold
+    font-size: 1.2rem
+    line-height: 30px
+    color: $text-color--dark
+    margin: 1rem 0
+
+    &--dark
+      color: $c-white
+
+  &__selected-text
+    margin: 2rem 0 0 0
+    font-family: Poppins
+    font-style: normal
+    font-weight: 500
+    font-size: 0.9rem
+    line-height: 1.75rem
+    color: rgba($text-color--dark, 0.6)
+
+// Media
+
+@media screen and (max-width: 1024px)
+  .mobile-tabs
+    display: block

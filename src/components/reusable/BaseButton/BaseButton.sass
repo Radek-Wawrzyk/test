@@ -1,0 +1,96 @@
+.base-button
+  position: relative
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  text-align: center
+  background-color: transparent
+  border: 2px solid rgba(0, 0, 0, 0.4)
+  padding: 20px 30px
+  margin: 0
+  min-height: 60px
+  border-radius: 6px
+  transition: all $time
+  outline: none
+  max-height: 60px
+
+  &:hover, &:focus
+    cursor: pointer
+    border-color: $c-black
+
+    .base-button__text
+      color: $c-black
+
+  &--primary
+    background-color: $c-brand-blue
+    border-color: $c-brand-blue
+
+    &:hover, &:focus
+      border-color: $c-brand-blue
+
+      .base-button__text
+        color: $c-white
+
+    .base-button__text
+      color: $c-white
+
+  &--outline
+    background-color: transparent
+    border-color: rgba(255, 255, 255, 0.6)
+
+    &-dark
+      &:hover, &:focus
+        border-color: $c-white
+
+        .base-button__text
+          color: $c-white
+
+    &-light
+      &:hover, &:focus
+        border-color: $c-black
+
+
+    .base-button__text
+      color: $c-white
+
+  &--disabled
+    pointer-events: none
+    opacity: 0.6
+
+  &--text
+    background: none
+    min-width: auto
+    max-width: auto
+    border: none
+    min-height: 46px
+    padding: 0.5rem 0
+
+    &-primary
+      &:hover, &:focus
+        opacity: 0.7
+
+        .base-button__text
+          color: $c-brand-blue
+
+
+      .base-button__text
+        color: $c-brand-blue
+
+  &--small
+    padding: 0.5rem 1.5rem
+    min-height: 42px
+
+  &__icon
+    margin: 0 0 0 1rem
+
+    &-left
+      margin: 0 1rem 0 0
+
+  &__text
+    font-family: Poppins
+    font-style: normal
+    font-weight: 600
+    font-size: 15px
+    line-height: 22px
+    color: rgba(0, 0, 0, 0.8)
+    transition: all $time

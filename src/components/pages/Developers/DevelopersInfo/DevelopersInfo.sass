@@ -1,0 +1,44 @@
+.developers-info
+  padding: 9rem 0
+  position: relative
+  background-color: $c-bg-light
+
+  &__header
+    position: relative
+
+  &__actions
+    display: flex
+    align-items: center
+    justify-content: center
+    margin: 4rem 0 0 0
+
+    &-button
+      margin: 0 0 2rem 0 !important
+      height: 85px
+      max-height: 85px
+
+      &:first-child
+        margin: 0 4rem 2rem 0 !important
+
+@media screen and (max-width: 768px)
+  .developers-info
+    &__actions
+      &-button
+        margin: 0 1rem 2rem 0 !important
+
+        &:first-child
+          margin: 0 1rem 2rem 0 !important
+
+
+@media screen and (max-width: 520px)
+  .developers-info
+    &__actions
+      flex-direction: column
+
+      &-button
+        margin: 0 0 0 0 !important
+        max-width: 300px
+        width: 100%
+
+        &:first-child
+          margin: 0 0 2rem 0 !important

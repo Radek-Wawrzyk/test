@@ -1,0 +1,59 @@
+.section-start
+  position: relative
+  background-color: $c-bg-light
+  padding: 9rem 0
+
+  &__content
+    max-width: 640px
+    width: 100%
+    margin: 0 auto
+
+  &__header
+    .base-header__heading
+      margin: 0 0 1.5rem 0
+
+  &__form
+    position: relative
+    width: 100%
+    display: block
+    margin: 3.8rem 0 0 0
+
+    &-group
+      width: 100%
+      display: flex
+      align-items: flex-start
+
+    &-input
+      width: 60%
+      margin: 0 2rem 0 0
+
+    .base-button
+      width: 40%
+
+    &-info
+      margin: 1.6rem 0 0 0
+
+      .info-bar__label
+        min-width: 40px
+        text-align: center
+
+@media screen and (max-width: 640px)
+  .section-start
+    &__form
+      &-input
+        width: 100%
+        margin: 0 0 2rem 0
+
+      .base-button
+          width: 100%
+
+      &-group
+        flex-wrap: wrap
+        flex-direction: column
+
+      &-info
+        width: 100%
+
+        .info-bar__label
+          min-width: 40px
+

@@ -1,0 +1,205 @@
+.home-stories
+  position: relative
+  padding: 9rem 0
+  overflow: hidden
+
+  &__inner
+    display: flex
+    // align-items: center
+    justify-content: space-between
+
+  &__info
+    position: relative
+    z-index: 5
+    width: 50%
+    background-color: $c-white
+    display: flex
+    align-items: center
+
+    // &::before
+    //   content: ''
+    //   position: absolute
+    //   left: -120px
+    //   top: 0
+    //   width: calc(100vw - 640px - 200px)
+    //   height: 100%
+    //   background-color: $c-white
+    //   z-index: 1
+
+  &__slider
+    position: relative
+    padding: 0 0 3rem 0
+    width: 50%
+    max-width: 640px
+    overflow: unset
+    margin: 0 0 0 auto
+    // margin: 0 460px 0 0
+
+    &-pagination
+      left: calc(640px - 188px) !important
+      width: auto !important
+      display: flex
+      justify-content: center
+      bottom: 0 !important
+
+      &-item
+        transition: all $time
+        background: rgba($c-brand-blue, 0.4)
+        border-radius: 20px
+        width: 52px
+        height: 6px
+        margin: 0 1rem 0 0 !important
+        border: none
+        padding: 0
+        opacity: 1 !important
+
+        &.swiper-pagination-bullet-active
+          background: $c-brand-blue
+
+        &:last-child
+          margin: 0 !important
+
+  &-slide
+    &__inner
+      position: relative
+      display: flex
+      justify-content: space-between
+      align-items: center
+
+    &__content
+      width: 100%
+      max-width: 640px
+
+      &-logo
+        max-width: 150px
+        width: 100%
+
+      &-img
+        margin: 2.2rem 0
+
+    &__info
+      padding: 0 0 0 2rem
+
+      &-header
+        margin: 0 0 2rem 0
+
+    &-info
+      padding: 1.625rem
+      background-color: $c-bg-light
+      border-radius: $border-radius
+      display: flex
+
+      &__content
+        &-text
+          font-family: Poppins;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 0.9rem
+          line-height: 1.75rem
+          color: rgba($c-black, 0.6)
+          margin: 0 0 1.2rem 0
+
+      &__author
+        display: flex
+        max-width: 200px
+        width: 100%
+
+        &-avatar
+          object-fit: cover
+          width: 43px
+          height: 43px
+          border-radius: 50%
+          margin: 0 1.2rem 0 0
+
+        &-name
+          color: $c-brand-blue
+          font-family: Poppins;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 0.9rem;
+          line-height: 1.75rem
+
+        &-position
+          color: rgba($c-black, 0.4)
+          font-family: Poppins;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 0.8rem
+          line-height: 1.75rem
+
+// Media
+
+@media screen and (max-width: 1640px)
+  .home-stories
+    &__info
+      width: 50%
+
+    &__slider
+      padding: 0 0 3rem 2rem
+
+
+@media screen and (max-width: 1280px)
+  .home-stories
+    &__inner
+      flex-direction: column
+
+    &__slider
+      width: 100%
+      max-width: 1024px
+      padding: 0 0 3rem 0
+      margin: 0
+
+    &__info
+      order: -1
+      margin: 0 0 4rem 0
+      justify-content: center
+      width: 100%
+
+      .base-header
+        max-width: 100% !important
+        text-align: center
+
+      &-inner
+        text-align: center
+        width: 100%
+        max-width: 640px
+
+    .home-stories__slider-pagination
+      width: auto
+      left: calc(50% - 94px) !important
+
+    &-slide
+      &__inner
+        padding: 0 2rem
+
+      &__info
+        max-width: 100%
+        width: 100%
+        margin: 0 0 4rem 0
+        padding: 0
+
+      &__content
+        max-width: 100%
+        order: 1
+
+        &-img
+          max-width: 100%
+          width: 100%
+
+      &__inner
+        flex-direction: column
+
+@media screen and (max-width: 768px)
+  .home-stories
+    &-slide
+      &__inner
+        padding: 0 1rem
+
+      &__content-logo
+        max-width: 100px
+
+      &-info
+        flex-direction: column
+
+        &__author
+          margin: 0 0 1rem 0

@@ -1,0 +1,106 @@
+.main-header
+  padding: 12.5rem 0 10rem 0
+  background: $c-dark-bg
+  color: $c-white
+
+  &__container
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+
+  &__content
+    max-width: 620px
+    width: 100%
+
+  &__top-img
+    margin: 0 0 1.5rem 0
+    max-width: 200px
+
+  &__label
+    margin: 0 0 2.6rem 0
+
+    .info-bar__wrapper
+      align-items: stretch !important
+
+  &__info
+    width: calc(100% - 620px)
+    padding: 0 0 0 9rem
+
+  &__heading
+    font-family: Poppins
+    font-style: normal
+    font-weight: bold
+    font-size: 3rem
+    line-height: 4.125rem
+    margin: 0 0 1rem 0
+
+  &__text
+    font-family: Poppins
+    font-style: normal
+    font-weight: 500
+    font-size: 1rem
+    line-height: 1.5rem
+    letter-spacing: 0.01em
+    max-width: 450px
+    color: rgba($c-white, 0.6)
+    margin: 0 0 3rem 0
+
+
+@media screen and (max-width: 1560px)
+  .main-header
+    &__container
+      align-items: center
+
+    &__content
+      width: 50%
+      padding: 0 2rem 0 0
+
+    &__info
+      width: 50%
+      padding: 0 0 0 2rem
+
+@media screen and (max-width: 1378px)
+  .main-header
+    &__container
+      align-items: flex-start
+
+    &__heading
+      font-size: 2rem
+      line-height: 3rem
+      margin: 0 0 2rem 0
+
+    &__content
+      width: 50%
+      padding: 0 2rem 0 0
+
+    &__info
+      width: 50%
+      padding: 0 0 0 2rem
+
+@media screen and (max-width: 1024px)
+  .main-header
+    padding: 10rem 0
+
+    &__container
+      flex-direction: column
+      text-align: center
+
+    &__heading
+      font-size: 2rem
+      line-height: 3rem
+      margin: 0 0 2rem 0
+
+    &__content
+      width: 100%
+      padding: 0
+      margin: 0 auto 4rem auto
+
+    &__text
+      margin: 0 auto 3rem auto
+
+    &__info
+      width: 100%
+      padding: 0
+
+      &-img
+        margin: 0 auto

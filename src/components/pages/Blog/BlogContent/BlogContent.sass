@@ -1,0 +1,48 @@
+.blog-content
+  position: relative
+  padding: 0 0 9rem 0
+
+  &__header
+    .sub-header__container
+      padding: 256px 2rem calc(7.5rem + 200px) 2rem
+
+
+  &__listing
+    list-style: none
+    margin: none
+    padding: 0
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-gap: 4rem
+
+  &__first-tile
+    margin: -200px auto 7rem auto !important
+
+  &__actions
+    display: flex
+    align-items: center
+    justify-content: center
+    margin: 5rem 0 0 0
+
+
+@media screen and (max-width: 1024px)
+  .blog-content
+    &__listing
+      grid-gap: 2rem
+
+@media screen and (max-width: 640px)
+  .blog-content
+    &__header
+      .sub-header__container
+        padding: 16rem 2rem 7.5rem 2rem
+    &__first-tile
+      margin: 9rem 0 2rem 0 !important
+    &__listing
+      grid-template-columns: repeat(1, 1fr)
+      grid-gap: 2rem
+
+@media screen and (max-width: 576px)
+  .blog-content
+    &__header
+      .sub-header__container
+        padding: 10rem 1rem 6rem 1rem

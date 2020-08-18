@@ -1,0 +1,42 @@
+.base-textarea
+  position: relative
+  height: 260px
+  outline: none
+  width: 100%
+
+  &__inner
+    position: relative
+    height: 100%
+    width: 100%
+    border: 2px solid rgba($c-black, 0.2)
+    border-radius: $border-radius
+    background-color: $c-white
+    color: rgba($c-black, 0.3) !important
+    font-size: 0.9rem
+    font-weight: 500
+    font-family: Poppins
+    font-style: normal
+    line-height: 1.4rem
+    transition: all $time
+    padding: 1rem 1.5rem
+    outline: none
+
+    &:focus
+      border-color: $c-brand-blue
+
+    &::placeholder
+      color: rgba($c-black, 0.3)
+      font-size: 0.9rem
+      font-weight: 500
+      line-height: 1.4rem
+      transition: all $time
+      font-family: Poppins
+      font-style: normal
+
+  &__error
+    position: absolute
+    left: 0
+    top: calc(100% + 5px)
+    font-size: 11px
+    line-height: 1.4
+    color: $c-error

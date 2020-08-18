@@ -1,0 +1,34 @@
+[
+    {
+        "label": "Platform",
+        "url": "/platform",
+        "menuItems": [
+            { "label": "Why Lottify?", "url": "/platform#why" },
+            { "label": "Features", "url": "/platform#features" },
+            { "label": "Benefits", "url": "/platform#benefits" },
+            { "label": "Architecture", "url": "/platform#architecture" },
+            { "label": "Compliance", "url": "/platform#compliance" },
+            { "label": "Developers", "url": "/platform#developers" },
+            { "label": "Licenses", "url": "/platform#licenses" }
+        ]
+    },
+    {
+        "label": "Markets",
+        "url": "/markets"
+    },
+    {
+        "label": "Customers",
+        "url": "/customers"
+    },
+    {
+        "label": "Resources",
+        "url": "",
+        "menuItems": [
+            { "label": "Resource Center", "url": "/resource-center" },
+            { "label": "Blog", "url": "/blog" },
+            { "label": "FAQ", "url": "/faq" },
+            { "label": "Developer Docs", "url": "/developers" },
+            { "label": "API Reference", "url": "/api-reference" }
+        ]
+    }
+]

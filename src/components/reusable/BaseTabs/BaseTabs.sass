@@ -1,0 +1,107 @@
+.base-tabs
+  position: relative
+  display: flex
+  flex-direction: column
+
+  &--vertical
+    flex-direction: row
+    align-items: flex-start
+
+    .base-tabs__list
+      order: 0 !important
+      margin: 0 5.6rem 0 0
+      min-width: 250px
+
+    .base-tabs__content
+      width: 100%
+
+  &__active-line
+    position: absolute
+    left: 0
+    height: 5px
+    border-radius: 40px
+    background-color: $c-brand-blue
+    transition: all 0.5s
+
+    &--dark
+      background-color: $c-brand-green
+
+    &--top
+      top: 0px
+
+    &--bottom
+      bottom: 0px
+
+    &--left
+      left: 0px
+
+    &--right
+      right: 0px
+      left: unset
+
+  &__list
+    position: relative
+    padding: 2.3rem 0 0 0
+    position: relative
+    list-style: none
+    margin: 0
+    display: grid;
+    grid-template-columns: repeat(3, 1fr)
+
+    &::before
+      content: ''
+      position: absolute
+      left: 0
+      height: 5px
+      background-color: $c-bg-medium
+      width: 100%
+      border-radius: 40px
+
+    &--bottom
+      padding: 2rem 0 2rem 0
+
+      &::before
+        bottom: 0
+        background-color: rgba($c-white, 0.2)
+
+    &--dark
+      &::before
+        background-color: rgba($c-white, 0.2)
+
+    &--vertical
+      max-width: 250px
+      grid-gap: 0
+      border: 0
+      padding: 0
+
+      &::before
+        height: 100%
+        width: 5px
+
+      .base-tab-item
+        padding: 1rem
+
+      &-right
+        &::before
+          right: 0
+          left: unset
+        .base-tab-item
+          &::before
+            top: 0
+            left: unset
+            right: -5px
+            width: 5px
+            height: 100%
+
+      &-left
+        .base-tab-item
+          &::before
+            top: 0
+            left: -5px
+            width: 5px
+            height: 100%
+
+
+@media screen and (max-width: 1024px)
+  .base-tabs
+    display: none

@@ -1,0 +1,90 @@
+.video-poster
+  position: relative
+  margin: 1rem 0 0 0
+
+  &__inner
+    position: relative
+    border: 2px solid #3C4255
+    border-radius: $border-radius
+    background: rgba($c-black, 0.4)
+    transition: all $time
+
+    &::before
+      content: '';
+      display: block
+      padding-top: calc(591.44 / 1127.34 * 100%);
+
+    &:hover
+      cursor: pointer
+      border-color: $c-white
+
+      .video-poster__button
+        &::before
+          border-color: $c-white
+
+  &__text
+    margin: 0.75rem 0 0 0
+    font-family: Poppins
+    font-style: normal
+    font-weight: bold
+    font-size: 0.875rem
+    line-height: 1.3125rem
+    color: $c-white
+    text-align: center
+
+  &__button
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+    width: 72px
+    height: 72px
+    border-radius: 50%
+    background-color: $c-white
+    display: flex
+    align-items: center
+    justify-content: center
+    border: none
+    margin: 0
+    padding: 0
+    transition: all $time
+    cursor: pointer
+
+    &::before, &::after
+      content: ''
+      display: block
+      position: absolute
+      border: 2px solid rgba($c-white, 0.6)
+      left: -10px
+      top: -10px
+      bottom: -10px
+      right: -10px
+      border-radius: 50%
+      animation: playPulse 1.5s linear infinite
+      transition: all $time
+
+    &::before
+      animation-delay: 0.5s
+
+    &-icon
+      margin: 0 0 0 4px
+
+  &__img
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+@keyframes playPulse
+  0%
+    transform: scale(0.6)
+    opacity: 0
+
+  50%
+    opacity: 1
+
+  100%
+    transform: scale(1.1)
+    opacity: 0

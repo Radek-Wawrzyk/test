@@ -1,0 +1,30 @@
+.home-header
+  position: relative
+
+  &__content
+    display: flex
+    align-items: center
+
+    &-button
+      margin: 0 2rem 0 0 !important
+
+      &:last-child
+        margin: 0
+
+
+@media screen and (max-width: 1024px)
+  .home-header
+    &__content
+      justify-content: center
+
+@media screen and (max-width: 476px)
+  .home-header
+    &__content
+      flex-direction: column
+
+      &-button
+        margin: 0 0 2rem 0 !important
+        width: 100%
+
+        &:last-child
+          margin: 0 !important

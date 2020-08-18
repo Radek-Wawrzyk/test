@@ -1,0 +1,100 @@
+.social-tile
+  list-style: none
+  margin: 0
+  width: 100%
+  position: relative
+  background-color: $c-bg-light
+  overflow: hidden
+  border-radius: $border-radius
+
+  &--big
+    display: flex
+    align-items: stretch
+    max-width: 1000px
+    width: 100%
+    height: 400px
+
+    .social-tile__img
+      width: 60%
+      min-width: 60%
+
+      &-inner
+        height: 100%
+
+  &__img
+    width: 100%
+    position: relative
+    margin: 0
+    padding: 0
+
+    &-inner
+      object-fit: cover
+      width: 100%
+
+    &-label
+      position: absolute
+      left: 2rem
+      top: 2rem
+      height: 28px
+      display: flex
+      align-items: center
+      justify-content: center
+      text-align: center
+      padding: 0 0.6rem
+      background-color: $c-brand-blue
+      border-radius: $border-radius
+      font-family: Poppins
+      font-style: normal
+      font-weight: bold
+      font-size: 0.9rem
+      color: $c-white
+      text-transform: uppercase
+
+  &__link
+    max-width: 140px
+    text-align: left !important
+    justify-content: flex-start !important
+
+  &__content
+    width: 100%
+    padding: 2rem
+
+  &__date
+    font-family: Poppins
+    font-style: normal
+    font-weight: 600
+    font-size: 0.95rem
+    line-height: 1.4rem
+    letter-spacing: 0.12em
+    color: $c-brand-blue
+    text-transform: uppercase
+
+  &__name
+    font-family: Poppins
+    font-style: normal
+    font-weight: bold
+    font-size: 1.25rem
+    line-height: 2.25rem
+    color: $c-black
+    margin: 0.75rem 0 1rem 0
+
+  &__text
+    font-family: Poppins
+    font-style: normal
+    font-weight: 500
+    font-size: 0.95rem
+    line-height: 1.4rem
+    color: rgba($c-black, 0.6)
+    margin: 0 0 1.6rem 0
+
+@media screen and (max-width: 1024px)
+  .social-tile
+    &__content
+      padding: 1rem
+
+    &--big
+      flex-direction: column
+      height: auto
+
+      .social-tile__img
+        width: 100%

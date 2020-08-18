@@ -1,0 +1,99 @@
+.platform-licences
+  position: relative
+  padding: 9rem 0
+  overflow-x: hidden
+
+  &__header
+    margin: 0 auto 6rem auto
+
+  &__content
+    margin: 0 auto
+    max-width: 1150px
+    width: 100%
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-gap: 2.5rem
+    padding: 0 2rem
+
+  &__slider
+    width: calc(100% - 120px)
+    position: relative
+    justify-content: center
+    display: flex
+    flex-wrap: wrap
+    overflow: unset
+
+    &-button
+      display: inline-flex
+      background: none
+      padding: 0
+      border: none
+      transition: opacity $time
+      position: relative
+      z-index: 5
+
+      &--prev
+        margin: 0 6rem 0 0
+
+      &:hover, &:focus
+        cursor: pointer
+        opacity: 0.7
+
+  &-slide
+    border-radius: $border-radius
+    padding: 2rem 3.5rem
+    margin: 0 0 3rem 0
+    background-color: $c-bg-light
+    border: 2px solid rgba(60, 66, 85, 0.1)
+    text-align: center
+
+    &--soon
+      .platform-licences-slide
+        &__img
+          opacity: 0.1
+
+        &__text
+          color: rgba($c-black, 0.1)
+
+
+    &__img
+      display: inline-block
+
+    &__text
+      margin: 1.5rem 0 0 0
+      font-family: Poppins
+      font-style: normal
+      font-weight: 500
+      font-size: 0.85rem
+      line-height: 1.75rem
+      color: rgba($c-black, 0.6)
+
+      &--soon
+        font-size: 1.25rem
+        font-weight: bold
+        margin: 3.5rem 0 4rem 0
+
+@media screen and (max-width: 1280px)
+  .platform-licences
+    &-slide
+      padding: 2rem 1rem
+
+@media screen and (max-width: 920px)
+  .platform-licences
+    &__slider
+      width: calc(100% - 60px)
+
+@media screen and (max-width: 768px)
+  .platform-licences
+    &__header
+      padding: 0 1rem
+
+    &__content
+      padding: 0 1rem
+      grid-template-columns: repeat(1, 1fr)
+
+
+@media screen and (max-width: 640px)
+  .platform-licences
+    &__slider
+      width: calc(100% - 40px)

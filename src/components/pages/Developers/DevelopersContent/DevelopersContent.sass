@@ -1,0 +1,32 @@
+.developers-content
+  position: relative
+  padding: 9rem 0
+
+  &__header
+    margin: 0 0 7rem 0
+
+  &__listing
+    list-style: none
+    margin: none
+    padding: 0
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-gap: 4rem
+
+  &__actions
+    display: flex
+    align-items: center
+    justify-content: center
+    margin: 5rem 0 0 0
+
+
+@media screen and (max-width: 1024px)
+  .developers-content
+    &__listing
+      grid-gap: 2rem
+
+@media screen and (max-width: 768px)
+  .developers-content
+    &__listing
+      grid-template-columns: repeat(1, 1fr)
+      grid-gap: 2rem
