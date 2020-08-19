@@ -70,10 +70,12 @@ export default {
     lastScrollPosition: 0,
     currentScrollPosition: 0,
     hasScrolled: false,
+
   }),
   computed: {
     ...mapState({
       isMenuOpen: state => state.mobileMenu,
+      canShow: state => state.navigationScrollBehavior,
     }),
   },
   methods: {
@@ -88,6 +90,14 @@ export default {
       }
 
       if (Math.abs(this.currentScrollPosition - this.lastScrollPosition) < 101) {
+        return;
+      }
+
+      if (this.isMenuOpen) {
+        this.showNavbar = true;
+      }
+
+      if (!this.canShow) {
         return;
       }
 

@@ -11,7 +11,6 @@
 
   &__inner
     display: flex
-    align-items: flex-start
 
   &__content
     width: 100%
@@ -32,21 +31,31 @@
   &__tabs
     max-width: 360px
     width: 100%
-    margin: 0 7.5rem 0 0
+    margin: 0 7rem 0 0
+
+    .platform-developers-tab
+      &:last-of-type
+        padding: 1.5rem 0 !important
 
     .base-tabs__active-line
       background-color: $c-brand-blue
 
     .base-tabs__list
+      display: block
+      list-style: none
       max-width: 360px
       min-width: 360px !important
-      width: 100%
+      width: 100% !important
+      margin: 0 !important
 
   &-tab
     position: relative
     opacity: 0.5 !important
     transition: all $time
-    padding: 2rem 1rem !important
+    padding: 1.5rem 0 2.5rem 0 !important
+
+    .base-tab-item__button
+      padding: 0 1rem 0 0
 
     &.base-tab-item--active
       opacity: 1 !important
@@ -58,9 +67,10 @@
       font-family: Poppins
       font-style: normal
       font-weight: 500
-      font-size: 0.8rem
+      font-size: 0.8125rem
       line-height: 1.2rem
       color: rgba($c-white, 0.6)
+      max-width: 300px
 
 
     &__header
@@ -87,7 +97,7 @@
         border-radius: $border-radius
         color: $c-white
         background-color: $c-brand-blue
-        margin: 0 1rem 0 0
+        margin: 0 0.5rem 0 0
         font-family: Poppins
         font-style: normal
         font-weight: 600

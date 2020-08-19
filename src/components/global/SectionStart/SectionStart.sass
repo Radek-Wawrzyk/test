@@ -4,19 +4,29 @@
   padding: 9rem 0
 
   &__content
-    max-width: 640px
+    max-width: 800px
     width: 100%
     margin: 0 auto
 
   &__header
+    .base-header__text
+      color: rgba($c-black, 0.6)
+      font-weight: 500
+
     .base-header__heading
-      margin: 0 0 1.5rem 0
+      margin: 0 0 1rem 0
+      font-family: Poppins
+      font-style: normal
+      font-weight: bold
+      font-size: 2rem
+      line-height: 3rem
 
   &__form
     position: relative
     width: 100%
+    max-width: 660px
     display: block
-    margin: 3.8rem 0 0 0
+    margin: 2rem auto 0 auto
 
     &-group
       width: 100%
@@ -31,11 +41,23 @@
       width: 40%
 
     &-info
-      margin: 1.6rem 0 0 0
+      margin: 0.2rem 0 0 0
+
+      .info-bar__text
+        padding: 0.5rem
+        color: rgba($c-black, 0.6)
+        font-weight: 500
 
       .info-bar__label
-        min-width: 40px
+        min-width: 37px
+        width: 37px
+        height: 14px
+        font-size: 0.5rem !important
+        line-height: 14px
         text-align: center
+        padding: 0 !important
+        text-align: center
+
 
 @media screen and (max-width: 640px)
   .section-start

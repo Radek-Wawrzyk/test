@@ -5,8 +5,8 @@
         <base-header
           class="section-start__header"
           align="center"
-          heading="Start Your Own Lottery Business"
-          text="Turn your idea into a growth engine. Sign up for Lottify and start <br/> developing your own online Lotto store in just a few clicks."
+          heading="Start building your own lottery business today!"
+          text="Turn your idea into a growth engine. You're just a few clicks away <br/> from a life-changing experience - why not try it?"
         />
         <validation-observer
           tag="form"

@@ -44,13 +44,24 @@ export default {
     observer: null,
     options: null,
     isLoaded: false,
+    isScrolling: false,
   }),
   methods: {
+    handleScroll(event) {
+      window.clearTimeout(this.isScrolling);
+
+      this.isScrolling = setTimeout(() => {
+        this.$store.dispatch('enableNavigation');
+        document.removeEventListener("scroll", this.handleScroll);
+      }, 66);
+    },
     scrollTo(payload) {
+      this.$store.dispatch('disableNavigation');
+      document.addEventListener("scroll", this.handleScroll, false);
       this.moveActiveLine(payload);
       this.observer.disconnect();
       this.isLoaded = false;
-      // Get formatted ID from the link
+
       const id = payload.includes('#') ? payload.substr(1) : payload;
       const target = document.querySelector(`#${id}`);
       const sections = document.querySelectorAll('.platform-section');

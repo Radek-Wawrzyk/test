@@ -41,7 +41,7 @@
         {{ data.text }}
       </p>
       <base-button
-        :to="data.link"
+        :to="mode === 'stories' ? `customers/${data.link}` : data.link"
         :title="data.heading"
         class="social-tile__link"
         type="text"

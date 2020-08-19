@@ -23,7 +23,7 @@
           type="outline"
           title="Get started for free"
           class="home-header__content-button"
-          to="#"
+          @click="scrollDown()"
         >
           Learn more
         </base-button>
@@ -35,6 +35,16 @@
 <script>
 export default {
   name: 'PlatformHeader',
+  methods: {
+    scrollDown() {
+      const target = document.querySelector('.get-started');
+
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    },
+  },
 };
 </script>
 

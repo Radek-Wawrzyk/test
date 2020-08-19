@@ -2,7 +2,7 @@
   <div class="main-social-media">
     <div class="main-social-media__text">Follow us on:</div>
     <div class="main-social-media__list">
-      <a href="#" class="main-social-media__item">
+      <!-- <a href="#" class="main-social-media__item">
         <g-image
           alt
           src="@/assets/icons/socials/fb.svg"
@@ -15,7 +15,7 @@
           src="@/assets/icons/socials/ig.svg"
           class="main-social-media__icon"
         />
-      </a>
+      </a> -->
       <a href="#" class="main-social-media__item">
         <g-image
           alt
@@ -30,13 +30,13 @@
           class="main-social-media__icon"
         />
       </a>
-      <a href="#" class="main-social-media__item">
+      <!-- <a href="#" class="main-social-media__item">
         <g-image
           alt
           src="@/assets/icons/socials/db.svg"
           class="main-social-media__icon"
         />
-      </a>
+      </a> -->
     </div>
   </div>
 </template>

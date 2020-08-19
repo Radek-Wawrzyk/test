@@ -118,24 +118,12 @@
         "url": "/sign-up-for-free",
         "new": false,
         "external": false
-      },
-      {
-        "label": "Schedule a demo",
-        "url": "/schedule-a-demo",
-        "new": false,
-        "external": false
       }
     ]
   },
   {
     "title": "Company",
     "items": [
-      {
-        "label": "Who we are",
-        "url": "/who-we-are",
-        "new": false,
-        "external": false
-      },
       {
         "label": "Contact",
         "url": "/contact",

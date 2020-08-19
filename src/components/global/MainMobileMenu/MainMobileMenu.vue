@@ -27,6 +27,7 @@
               :key="menuItem.label"
               :to="menuItem.url"
               class="mobile-menu__sub-link"
+              @click.native="closeMobileMenu()"
             >
               {{ menuItem.label }}
             </g-link>
@@ -76,8 +77,13 @@ query {
 
 <script>
 export default {
-  name: 'MainMobileMenu'
-}
+  name: 'MainMobileMenu',
+  methods: {
+    closeMobileMenu() {
+      this.$store.dispatch('toggleMenu');
+    },
+  },
+};
 </script>
 
 <style lang="sass" src="./MainMobileMenu.sass" />
