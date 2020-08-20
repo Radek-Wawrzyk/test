@@ -12,7 +12,10 @@
         />
         <div
           class="market-header-info__marker"
-          v-for="mark in marks"
+          :class="[
+            `market-header-info__marker--${index + 1}`
+          ]"
+          v-for="(mark, index) in marks"
           :key="mark.id"
           :style="{
             left: `${mark.left}%`,

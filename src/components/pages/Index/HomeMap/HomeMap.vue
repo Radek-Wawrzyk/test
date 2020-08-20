@@ -41,6 +41,7 @@ export default {
       chart.seriesContainer.draggable = false;
       chart.seriesContainer.resizable = false;
       chart.maxZoomLevel = 1;
+      chart.deltaLongitude = -10
       let polygonSeries = chart.series.push(new am4maps.MapPolygonSeries());
 
       // Exclude Antartica

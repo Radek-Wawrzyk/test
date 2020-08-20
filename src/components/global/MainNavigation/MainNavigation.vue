@@ -85,11 +85,17 @@ export default {
     onScroll () {
       this.currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
 
+      if (this.currentScrollPosition > 0) {
+        this.hasScrolled = true;
+      } else {
+        this.hasScrolled = false;
+      }
+
       if (this.currentScrollPosition < 0) {
         return;
       }
 
-      if (Math.abs(this.currentScrollPosition - this.lastScrollPosition) < 101) {
+      if (Math.abs(this.currentScrollPosition - this.lastScrollPosition) < 301) {
         return;
       }
 
@@ -101,7 +107,6 @@ export default {
         return;
       }
 
-      this.currentScrollPosition >= 100 ? this.hasScrolled = true : this.hasScrolled = false;
       this.showNavbar = this.currentScrollPosition < this.lastScrollPosition;
       this.lastScrollPosition = this.currentScrollPosition;
     },

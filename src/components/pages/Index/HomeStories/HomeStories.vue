@@ -44,7 +44,7 @@
                     {{ item.story_text }}
                   </p>
                   <base-button
-                    :to="item.story_link"
+                    :to="`/customers/${item.story_link}`"
                     :title="`Read ${item.story_company}'s Story`"
                     class="home-stories-slide-info__content-button"
                     type="text"

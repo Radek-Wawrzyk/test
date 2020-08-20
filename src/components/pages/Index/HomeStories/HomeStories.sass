@@ -12,19 +12,10 @@
     position: relative
     z-index: 5
     width: 50%
+    padding: 0 6rem 0 0
     background-color: $c-white
     display: flex
     align-items: center
-
-    // &::before
-    //   content: ''
-    //   position: absolute
-    //   left: -120px
-    //   top: 0
-    //   width: calc(100vw - 640px - 200px)
-    //   height: 100%
-    //   background-color: $c-white
-    //   z-index: 1
 
   &__slider
     position: relative
@@ -147,13 +138,15 @@
       width: 100%
       max-width: 1024px
       padding: 0 0 3rem 0
-      margin: 0
+      // margin: 0 when is slider mode
+      margin: 0 auto
 
     &__info
       order: -1
       margin: 0 0 4rem 0
       justify-content: center
       width: 100%
+      padding: 0
 
       .base-header
         max-width: 100% !important
