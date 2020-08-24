@@ -1,0 +1,21 @@
+.platform-header
+  position: relative
+
+  &__actions
+    display: none
+
+
+// Media
+
+@media screen and (max-width: 1024px)
+  .platform-header
+    &__content
+      display: none
+
+    &__actions
+      margin: 5rem 0 0 0
+      display: flex
+      justify-content: center
+
+    .main-header__text
+      margin: 0 auto

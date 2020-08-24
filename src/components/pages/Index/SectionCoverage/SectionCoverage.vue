@@ -16,7 +16,7 @@
           class="section-coverage__map"
         /> -->
         <!-- <transition-group name="fade" mode="out-in"> -->
-          <home-map
+          <!-- <home-map
             class="ection-coverage__map"
             :class="[
               activeTab === 'singapore' ? 'section-coverage__map--active' : '',
@@ -45,7 +45,7 @@
             key="new_virgina"
             :data="virginiaData"
             name="virgina"
-          />
+          /> -->
         <!-- </transition-group> -->
       </main>
       <mobile-tabs

@@ -17,9 +17,15 @@
     display: flex
     align-items: center
 
+  &__actions
+    display: none
+    justify-content: center
+    padding: 5rem 0 0 0
+
   &__slider
     position: relative
-    padding: 0 0 3rem 0
+    // padding: 0 0 3rem 0
+    padding: 0
     width: 50%
     max-width: 640px
     overflow: unset
@@ -126,18 +132,26 @@
       width: 50%
 
     &__slider
-      padding: 0 0 3rem 2rem
+      // padding: 0 0 3rem 2rem
+      padding: 0 0 0 2rem
 
 
 @media screen and (max-width: 1280px)
   .home-stories
+    .home-stories-slide__info-button
+      display: none
+
+    &__actions
+      display: flex
+
     &__inner
       flex-direction: column
 
     &__slider
       width: 100%
       max-width: 1024px
-      padding: 0 0 3rem 0
+      // padding: 0 0 3rem 0
+      padding: 0
       // margin: 0 when is slider mode
       margin: 0 auto
 
@@ -196,3 +210,7 @@
 
         &__author
           margin: 0 0 1rem 0
+
+@media screen and (max-width: 640px)
+  .home-stories
+    padding: 5rem 0

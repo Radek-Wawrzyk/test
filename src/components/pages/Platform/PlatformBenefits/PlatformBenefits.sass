@@ -35,6 +35,11 @@
       display: flex
       align-items: stretch
 
+      &--top
+        .platform-benefits-slide
+          &:first-child
+            margin: 0 3.2rem 3.2rem 3.2rem
+
       &--bottom
         .platform-benefits-slide
           &:first-child
@@ -82,3 +87,19 @@
       font-size: 0.85rem
       line-height: 1.75rem
       color: rgba($c-white, 0.6)
+
+@media screen and (max-width: 920px)
+  .platform-benefits
+    &-carousel
+      &__inner
+        flex-direction: row
+
+      &__row
+        &--bottom
+          .platform-benefits-slide
+            &:first-child
+              margin: 0 3.2rem 3.2rem 0
+
+@media screen and (max-width: 640px)
+  .platform-benefits
+    padding: 5rem 0

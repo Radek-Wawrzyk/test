@@ -25,7 +25,7 @@
             class="platform-benefits-carousel__inner"
             ref="carousel-inner"
           >
-            <div class="platform-benefits-carousel__row">
+            <div class="platform-benefits-carousel__row platform-benefits-carousel__row--top">
               <div
                 class="platform-benefits-slide"
                 v-for="(item, index) in licensesTop"
@@ -124,19 +124,32 @@ export default {
     licenses: platform.benefits,
     licensesBottom: [],
     licensesTop: [],
+    windowWidth: window.innerWidth,
   }),
   methods: {
     goNext() {
-      if (this.width - this.transform - 300 >= 2800) {
-        return;
+      if (this.windowWidth >= 920) {
+        if (this.width - this.transform - 300 >= 2800) {
+          return;
+        }
+      } else {
+        if (this.width - this.transform - 300 >= 6800) {
+          return;
+        }
       }
 
       this.transform = this.transform - 300;
       this.$refs['carousel-inner'].style.transform = `translateX( ${this.transform }px )`;
     },
     goPrev() {
-      if (this.transform >= 600) {
-        return;
+      if (this.windowWidth >= 920) {
+        if (this.transform >= 600) {
+          return;
+        }
+      } else {
+        if (this.transform >= 100) {
+          return;
+        }
       }
 
       this.transform = this.transform + 300;

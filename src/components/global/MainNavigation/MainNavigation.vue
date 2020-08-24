@@ -47,11 +47,6 @@
         title="Open Menu"
         @click="toggleMenu()"
       >
-        <transition name="fade">
-          <span class="navigation__hamburger-text" :key="isMenuOpen">
-            {{ isMenuOpen ? 'Close' : 'Menu' }}
-          </span>
-        </transition>
         <span class="navigation__hamburger-box">
           <span class="navigation__hamburger-line"></span>
         </span>

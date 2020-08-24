@@ -1,6 +1,9 @@
 .home-header
   position: relative
 
+  &__mobile-poster
+    display: none
+
   &__content
     display: flex
     align-items: center
@@ -16,6 +19,18 @@
   .home-header
     &__content
       justify-content: center
+      flex-wrap: wrap
+
+    .main-header__info
+      display: none
+
+    .main-header__content
+      margin: 0 auto
+
+    &__mobile-poster
+      width: 100%
+      display: block
+      margin: 0 0 4rem 0 !important
 
 @media screen and (max-width: 476px)
   .home-header

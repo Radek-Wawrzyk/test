@@ -49,4 +49,9 @@
     &__listing
       grid-gap: 4rem
       align-content: center
-      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+
+@media screen and (max-width: 576px)
+  .platform-compliance
+    &__listing
+      grid-template-columns: repeat(1, 1fr)

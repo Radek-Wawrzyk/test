@@ -45,7 +45,6 @@
         </ul>
         <div class="customer-content-stats__actions">
           <base-button
-            to="#"
             title="Get started for free"
             type="primary"
             class="customer-content-stats__button"

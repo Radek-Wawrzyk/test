@@ -111,3 +111,45 @@
 
       &__disclaimer
         margin: 0 0 2rem 0
+
+
+@media screen and (max-width: 576px)
+  .main-footer
+    &-top
+      padding: 4.5rem 0
+
+      &__branding
+        display: flex
+        justify-content: center
+
+      &__navigation
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        grid-gap: 4rem 4rem;
+
+    &-bottom
+      &__main
+        justify-content: center
+
+      &__disclaimer
+        text-align: center
+
+      &__copyright
+        margin: 0 0 1rem 0
+
+      &__right
+        width: 100%
+
+        .main-social-media
+          &__text
+            width: 100%
+            text-align: center
+            margin: 0 0 1rem 0
+
+          &__list
+            justify-content: center
+            width: 100%
+
+@media screen and (max-width: 640px)
+  .main-footer
+    &-top
+      padding: 5rem 0

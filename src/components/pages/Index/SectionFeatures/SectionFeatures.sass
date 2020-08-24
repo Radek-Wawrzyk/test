@@ -1,10 +1,10 @@
 .features
   position: relative
-  padding: 150px 0 200px 0
+  padding: 9rem 0
   background-color: $c-bg-light
 
   &--benefits
-    padding: 0 0 150px 0
+    padding: 0 0 9rem 0
 
   &-content
     position: relative
@@ -95,6 +95,7 @@
       top: 100px
       width: 4px
       height: calc(100% - calc(64px + 32px))
+      background-repeat: repeat-y
       // object-fit: cover
 
     &__heading
@@ -193,8 +194,8 @@
 
       &__lines
         left: 19px
-        top: 50px
-        width: 5px
+        top: 80px
+        height: calc(100% - calc(64px))
 
       &__features
         &-item
@@ -205,3 +206,7 @@
 
         &-text
           font-size: 14px
+
+@media screen and (max-width: 640px)
+  .features
+    padding: 5rem 0

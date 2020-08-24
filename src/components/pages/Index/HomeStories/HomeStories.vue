@@ -84,6 +84,15 @@
           </div>
         </div>
       </main>
+      <div class="home-stories__actions">
+        <base-button
+          to="/customers"
+          title="See more success stories"
+          class="home-stories__actions-button"
+        >
+          See more success stories
+        </base-button>
+      </div>
     <!-- </div> -->
   </section>
 </template>

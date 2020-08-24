@@ -16,6 +16,16 @@
           Get started for free
         </base-button>
       </div>
+      <div class="platform-header__actions" slot="info">
+        <base-button
+          type="primary"
+          title="Get started for free"
+          class="platform-header__content-button"
+          to="#"
+        >
+          Get started for free
+        </base-button>
+      </div>
     </main-header>
   </header>
 </template>
@@ -23,10 +33,7 @@
 <script>
 export default {
   name: 'PlatformHeader',
-
-}
+};
 </script>
 
-<style>
-
-</style>
+<style lang="sass" src="./PlatformHeader.sass" />

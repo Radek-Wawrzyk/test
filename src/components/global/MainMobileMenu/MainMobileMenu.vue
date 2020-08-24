@@ -3,25 +3,29 @@
     <div class="container">
       <ul class="mobile-menu__list">
         <li
-          v-for="item in $static.navbarItems.edges"
+          v-for="item in menu"
           :key="item.node.label"
           :title="item.node.label"
           class="mobile-menu__item"
         >
-          <g-link
+          <button
             :to="item.node.url"
-            class="mobile-menu__link"
+            class="mobile-menu__link mobile-menu__link--group"
+            @click="openSubMenu(item.node.label)"
           >
             <div class="mobile-menu__text">
               {{ item.node.label }}
             </div>
-            <!-- <ChevronDownIcon
-              v-if="item.node.menuItems"
+            <ChevronDownIcon
+              v-if="item.node.menuItems.length"
               size="1.25x"
               class="mobile-menu__icon"
-            /> -->
-          </g-link>
-          <div v-if="item.node.menuItems.length" class="mobile-menu__sub-menu">
+              :class="[
+                item.node.status ? 'mobile-menu__icon--active' : '',
+              ]"
+            />
+          </button>
+          <div v-if="item.node.menuItems.length > 1 && item.node.status" class="mobile-menu__sub-menu">
             <g-link
               v-for="menuItem in item.node.menuItems"
               :key="menuItem.label"
@@ -76,12 +80,40 @@ query {
 </static-query>
 
 <script>
+import { ChevronDownIcon } from 'vue-feather-icons';
+
 export default {
   name: 'MainMobileMenu',
+  components: {
+    ChevronDownIcon,
+  },
+  data: () => ({
+    menu: [],
+  }),
   methods: {
+    isOpen(payload) {
+
+    },
     closeMobileMenu() {
       this.$store.dispatch('toggleMenu');
     },
+    openSubMenu(payload) {
+      const menuList = this.menu;
+      this.menu = menuList.map(item => {
+        item.node.label === payload ? item.node.status = !item.node.status : false;
+        return item
+      });
+    },
+  },
+  created() {
+    const menu = this.$static.navbarItems.edges;
+
+    // Set variable for open/hide status
+    menu.forEach(item => {
+      item.node.menuItems.length > 1 ? item.node.status = false : false;
+    });
+
+    this.menu = menu;
   },
 };
 </script>

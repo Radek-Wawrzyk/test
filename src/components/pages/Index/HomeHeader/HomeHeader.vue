@@ -11,6 +11,12 @@
       videoText="See How the Platform Works"
     >
       <div class="home-header__content" slot="content">
+        <video-poster
+          text="See How the Platform Works"
+          poster="https://i.imgur.com/aJxUgM5.png"
+          video="https://i.imgur.com/nXNIzJd.png"
+          class="home-header__mobile-poster"
+        />
         <base-button
           type="primary"
           title="Get started for free"

@@ -72,6 +72,7 @@ export default {
     allLoadedFeatures: false,
     features: [],
     featuresAll: [],
+    windowWidth: window.innerWidth
   }),
   computed: {
     features() {
@@ -81,14 +82,27 @@ export default {
   },
   mounted() {
     const projects = platform.more;
-    this.features = projects.slice(0, 6);
-    this.featuresAll = projects.slice(6);
+    window.onresize = () => {
+      this.windowWidth = window.innerWidth;
+
+      if (this.windowWidth >= 768) {
+        this.features = projects.slice(0, 6);
+        this.featuresAll = projects.slice(6);
+      } else {
+        this.features = projects.slice(0, 3);
+        this.featuresAll = projects.slice(3);
+      }
+    };
+
   },
   methods: {
     loadMore() {
       this.features = [...this.features, ...this.featuresAll];
       this.allLoadedFeatures = true;
     },
+    setFeatures() {
+
+    }
   },
 };
 </script>
