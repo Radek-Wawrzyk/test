@@ -124,7 +124,7 @@ export default {
     licenses: platform.benefits,
     licensesBottom: [],
     licensesTop: [],
-    windowWidth: window.innerWidth,
+    windowWidth: 0,
   }),
   methods: {
     goNext() {
@@ -198,6 +198,12 @@ export default {
     },
   },
   mounted() {
+    this.windowWidth = window.innerWidth;
+
+    window.onresize = () => {
+      this.windowWidth = window.innerWidth;
+    }
+
     setTimeout(() => {
       this.calculateWidth();
     }, 100);
