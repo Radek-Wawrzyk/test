@@ -8,50 +8,18 @@
         sub-heading="Get started"
         text="It takes only a few minutes to get started with Lottify. You’re just a few clicks away from selling lottery tickets."
       />
-
       <main class="section-coverage__content">
-        <!-- <div
-          ref="map"
-          id="map"
-          class="section-coverage__map"
-        /> -->
-        <!-- <transition-group name="fade" mode="out-in"> -->
-          <!-- <home-map
-            class="ection-coverage__map"
-            :class="[
-              activeTab === 'singapore' ? 'section-coverage__map--active' : '',
-            ]"
-            :pins="singaporePin"
-            :data="singaporeData"
-            key="singapore"
-            name="singapore"
-          />
-          <home-map
-            class="ection-coverage__map"
-            :class="[
-              activeTab === 'frankfurt' ? 'section-coverage__map--active' : '',
-            ]"
-            :pins="frankfurtPin"
-            :data="frankfurtData"
-            key="frankfurt"
-            name="frankfurt"
-          />
-          <home-map
-            class="ection-coverage__map"
-            :class="[
-              activeTab === 'new_virgina' ? 'section-coverage__map--active' : '',
-            ]"
-            :pins="virginiaPin"
-            key="new_virgina"
-            :data="virginiaData"
-            name="virgina"
-          /> -->
-        <!-- </transition-group> -->
+        <world-map
+          :countries="activeCountries"
+          :marker="activePin"
+        />
       </main>
+
       <mobile-tabs
         v-model="activeTab"
         mode="light"
         :data="tabs"
+        showLabel
       />
 
       <base-tabs
@@ -82,19 +50,13 @@
 <script>
 import { coverageTabs } from '@/data/staticData.js';
 
-// Global component am4charts variables
-let am4core;
-let am4maps;
-let am4geodata_worldLow;
-let am4themes_animated;
-let chart;
-
 export default {
   name: 'SectionCoverage',
   data: () => ({
     activeTab: 'singapore',
     tabs: coverageTabs,
-    map: '',
+    activePin: null,
+    activeCountries: null,
     backupPins: [
       {
         "title": "Frankfurt",
@@ -112,7 +74,9 @@ export default {
         "title": "Singapore",
         "key_name": 'singapore',
         "latitude": 1.2902,
-        "longitude": 103.8519
+        "longitude": 103.8519,
+        "left": 40,
+        "top": 40,
       },
     ],
   }),
@@ -124,6 +88,8 @@ export default {
           "key_name": 'frankfurt',
           "latitude": 50.110924,
           "longitude": 8.682127,
+          "left": 51,
+          "top": 24,
         },
       ];
     },
@@ -133,7 +99,9 @@ export default {
           "title": "New Virginia",
           "key_name": 'new_virgina',
           "latitude": 37.070831,
-          "longitude": -76.484444
+          "longitude": -76.484444,
+          "left": 28,
+          "top": 34,
         },
       ];
     },
@@ -143,26 +111,28 @@ export default {
           "title": "Singapore",
           "key_name": 'singapore',
           "latitude": 1.2902,
-          "longitude": 103.8519
+          "longitude": 103.8519,
+          "left": 83,
+          "top": 60,
         },
       ];
     },
     frankfurtData() {
       return [
         {
-          "id": "FR",
+          "code": "FR",
           "name": "France",
           "value": 50,
           "fill": '#4070C5'
         },
         {
-          "id": "DE",
+          "code": "DE",
           "name": "Germany",
           "value": 50,
           "fill": '#4070C5'
         },
         {
-          "id": "PL",
+          "code": "PL",
           "name": "France",
           "value": 50,
           "fill": '#4070C5'
@@ -172,37 +142,37 @@ export default {
     singaporeData() {
       return [
         {
-          "id": "RU",
+          "code": "RU",
           "name": "Germany",
           "value": 50,
           "fill": '#7799F6'
         },
         {
-          "id": "ES",
+          "code": "ES",
           "name": "France",
           "value": 50,
           "fill": '#7799F6'
         },
         {
-          "id": "IT",
+          "code": "IT",
           "name": "France",
           "value": 50,
           "fill": '#7799F6'
         },
         {
-          "id": "TR",
+          "code": "TR",
           "name": "Germany",
           "value": 50,
           "fill": '#AEC2F8'
         },
         {
-          "id": "EG",
+          "code": "EG",
           "name": "France",
           "value": 50,
           "fill": '#AEC2F8'
         },
         {
-          "id": "PT",
+          "code": "PT",
           "name": "France",
           "value": 50,
           "fill": '#AEC2F8'
@@ -212,19 +182,19 @@ export default {
     virginiaData() {
       return [
         {
-          "id": "UK",
+          "code": "UK",
           "name": "France",
           "value": 50,
           "fill": '#4070C5'
         },
         {
-          "id": "FR",
+          "code": "FR",
           "name": "France",
           "value": 50,
           "fill": '#4070C5'
         },
         {
-          "id": "RU",
+          "code": "RU",
           "name": "Germany",
           "value": 50,
           "fill": '#7799F6'
@@ -233,204 +203,53 @@ export default {
     },
   },
   methods: {
-  //   renderMap() {
-  //     // Configuration of chart
-  //     chart = am4core.create(this.$refs.map, am4maps.MapChart);
-  //     chart.geodata = am4geodata_worldLow;
-  //     chart.projection = new am4maps.projections.Miller();
-  //     chart.seriesContainer.draggable = false;
-  //     chart.seriesContainer.resizable = false;
-  //     chart.maxZoomLevel = 1;
-  //     let polygonSeries = chart.series.push(new am4maps.MapPolygonSeries());
 
-  //     // Exclude Antartica
-  //     polygonSeries.exclude = ["AQ"];
-  //     polygonSeries.useGeodata = true;
-
-  //     polygonSeries.data = [
-  //       {
-  //         "id": "FR",
-  //         "name": "France",
-  //         "value": 50,
-  //         "fill": '#4070C5'
-  //       },
-  //       {
-  //         "id": "DE",
-  //         "name": "Germany",
-  //         "value": 50,
-  //         "fill": '#4070C5'
-  //       },
-  //       {
-  //         "id": "PL",
-  //         "name": "France",
-  //         "value": 50,
-  //         "fill": '#4070C5'
-  //       },
-  //       {
-  //         "id": "UK",
-  //         "name": "France",
-  //         "value": 50,
-  //         "fill": '#4070C5'
-  //       },
-  //       {
-  //         "id": "FR",
-  //         "name": "France",
-  //         "value": 50,
-  //         "fill": '#4070C5'
-  //       },
-  //       {
-  //         "id": "RU",
-  //         "name": "Germany",
-  //         "value": 50,
-  //         "fill": '#7799F6'
-  //       },
-  //       {
-  //         "id": "ES",
-  //         "name": "France",
-  //         "value": 50,
-  //         "fill": '#7799F6'
-  //       },
-  //       {
-  //         "id": "IT",
-  //         "name": "France",
-  //         "value": 50,
-  //         "fill": '#7799F6'
-  //       },
-  //       {
-  //         "id": "TR",
-  //         "name": "Germany",
-  //         "value": 50,
-  //         "fill": '#AEC2F8'
-  //       },
-  //       {
-  //         "id": "EG",
-  //         "name": "France",
-  //         "value": 50,
-  //         "fill": '#AEC2F8'
-  //       },
-  //       {
-  //         "id": "PT",
-  //         "name": "France",
-  //         "value": 50,
-  //         "fill": '#AEC2F8'
-  //       },
-  //     ];
-
-  //     // Configure series
-  //     let polygonTemplate = polygonSeries.mapPolygons.template;
-  //     polygonTemplate.tooltipText = "{name}";
-  //     polygonTemplate.fill = '#DDDDDD';
-  //     polygonTemplate.propertyFields.fill = "fill";
-
-  //     // Create hover state and set alternative fill color
-  //     let hs = polygonTemplate.states.create("hover");
-  //     hs.properties.fill = chart.colors.getIndex(0);
-
-  //     // Add image series
-  //     let imageSeries = chart.series.push(new am4maps.MapImageSeries());
-  //     imageSeries.mapImages.template.propertyFields.longitude = "longitude";
-  //     imageSeries.mapImages.template.propertyFields.latitude = "latitude";
-  //     imageSeries.data = this.backupPins.filter(item => item.key_name === this.activeTab);
-
-  //     // add events to recalculate map position when the map is moved or zoomed
-  //     chart.events.on("ready", updateCustomMarkers );
-  //     chart.events.on("mappositionchanged", updateCustomMarkers );
-
-  //     // this function will take current images on the map and create HTML elements for them
-  //     function updateCustomMarkers(event) {
-  //       imageSeries.mapImages.each(function(image) {
-
-  //         if (!image.dummyData || !image.dummyData.externalElement) {
-  //           image.dummyData = {
-  //             externalElement: createCustomMarker(image)
-  //           };
-  //         }
-
-  //         // reposition the element accoridng to coordinates
-  //         let xy = chart.geoPointToSVG( { longitude: image.longitude, latitude: image.latitude } );
-  //         image.dummyData.externalElement.style.top = xy.y + 'px';
-  //         image.dummyData.externalElement.style.left = xy.x + 'px';
-  //       });
-  //     }
-
-  //     // this function creates and returns a new marker element
-  //     function createCustomMarker( image ) {
-  //       let chart = image.dataItem.component.chart;
-
-  //       // create holder
-  //       let holder = document.createElement('div');
-  //       holder.className = 'map__marker';
-  //       holder.title = image.dataItem.dataContext.title;
-  //       holder.style.position = 'absolute';
-  //       // holder.style.background = 'red';
-
-  //       // maybe add a link to it?
-  //       if ( undefined != image.url ) {
-  //         holder.onclick = function() {
-  //           window.location.href = image.url;
-  //         };
-  //         holder.className += ' map-clickable';
-  //       }
-
-  //       // create dot
-  //       let dot = document.createElement('div');
-  //       dot.className = 'map__marker-label';
-  //       dot.innerHTML = image.dataItem.dataContext.title;
-  //       holder.appendChild(dot);
-
-  //       // create pulse
-  //       let pulse = document.createElement('div');
-  //       pulse.className = 'map__marker-dot';
-  //       holder.appendChild( pulse );
-
-  //       // append the marker to the map container
-  //       chart.svgContainer.htmlElement.appendChild( holder );
-  //       return holder;
-  //     }
-
-  //     this.map = chart;
-  //   },
-  // },
-  // mounted() {
-  //   if (process.isClient) {
-  //     am4core = require("@amcharts/amcharts4/core");
-  //     am4maps = require("@amcharts/amcharts4/maps");
-  //     am4geodata_worldLow = require("@amcharts/amcharts4-geodata/worldLow").default;
-  //     am4themes_animated = require("@amcharts/amcharts4/themes/animated").default;
-  //     am4core.useTheme(am4themes_animated);
-  //     this.renderMap();
-  //   }
-  // },
-  // watch: {
-  //   activeTab() {
-  //     switch (this.activeTab) {
-  //       case 'singapore': {
-  //         this.pins = this.backupPins.filter(item => item.key_name === this.activeTab);
-  //         break;
-  //       };
-  //       case 'frankfurt': {
-  //         this.pins = this.backupPins
-  //         this.map.validateData();
-  //         chart.validateData();
-  //         chart.updateChart()
-  //         // this.renderMap();
-  //         // this.map.datarangechanged
-  //         // chart.data = this.backupPins
-  //         console.log(chart);
-  //         // this.map.data = []
-  //         break;
-  //       };
-  //       case 'new_virgina': {
-  //         this.pins = this.backupPins.filter(item => item.key_name === this.activeTab);
-  //         // this.renderMap();
-  //         this.map.datarangechanged
-  //         break;
-  //       };
-  //       default: {
-  //         break;
-  //       }
-  //     }
-  //   }
+  },
+  watch: {
+    activeTab() {
+      switch (this.activeTab) {
+        case 'singapore': {
+          this.activePin = this.singaporePin[0];
+          this.activeCountries = this.singaporeData;
+          break;
+        };
+        case 'frankfurt': {
+          this.activePin = this.frankfurtPin[0];
+          this.activeCountries = this.frankfurtData;
+          break;
+        };
+        case 'new_virgina': {
+          this.activePin = this.virginiaPin[0];
+          this.activeCountries = this.virginiaData;
+          break;
+        };
+        default: {
+          break;
+        }
+      }
+    }
+  },
+  created() {
+    switch (this.activeTab) {
+      case 'singapore': {
+        this.activePin = this.singaporePin[0];
+        this.activeCountries = this.singaporeData;
+        break;
+      };
+      case 'frankfurt': {
+        this.activePin = this.frankfurtPin[0];
+        this.activeCountries = this.frankfurtData;
+        break;
+      };
+      case 'new_virgina': {
+        this.activePin = this.virginiaPin[0];
+        this.activeCountries = this.virginiaData;
+        break;
+      };
+      default: {
+        break;
+      }
+    }
   },
 };
 </script>

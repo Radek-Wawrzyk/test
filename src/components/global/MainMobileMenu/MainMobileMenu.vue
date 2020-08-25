@@ -8,8 +8,27 @@
           :title="item.node.label"
           class="mobile-menu__item"
         >
-          <button
+          <g-link
+            v-if="!item.node.menuItems.length"
             :to="item.node.url"
+            class="mobile-menu__link mobile-menu__link--group"
+            @click.native="closeMobileMenu()"
+          >
+            <div class="mobile-menu__text">
+              {{ item.node.label }}
+            </div>
+            <ChevronDownIcon
+              v-if="item.node.menuItems.length"
+              size="1.25x"
+              class="mobile-menu__icon"
+              :class="[
+                item.node.status ? 'mobile-menu__icon--active' : '',
+              ]"
+            />
+          </g-link>
+
+          <button
+            v-else
             class="mobile-menu__link mobile-menu__link--group"
             @click="openSubMenu(item.node.label)"
           >
@@ -25,6 +44,7 @@
               ]"
             />
           </button>
+
           <div v-if="item.node.menuItems.length > 1 && item.node.status" class="mobile-menu__sub-menu">
             <g-link
               v-for="menuItem in item.node.menuItems"
@@ -91,14 +111,13 @@ export default {
     menu: [],
   }),
   methods: {
-    isOpen(payload) {
-
-    },
     closeMobileMenu() {
       this.$store.dispatch('toggleMenu');
     },
     openSubMenu(payload) {
       const menuList = this.menu;
+      const clickedItem = menuList.find(item => item.node.label === payload);
+
       this.menu = menuList.map(item => {
         item.node.label === payload ? item.node.status = !item.node.status : false;
         return item

@@ -15,7 +15,34 @@
           v-model="activeTab"
           mode="light"
           :data="tabs"
-        />
+          showLabel
+        >
+          <div class="platform-developers__content" slot="content">
+            <transition name="fade" mode="out-in">
+              <g-image
+                src="@/assets/images/code.svg"
+                alt=""
+                class="platform-developers__content-img"
+                key="entity"
+                v-if="activeTab === 'entity'"
+              />
+              <g-image
+                src="@/assets/images/code.svg"
+                alt=""
+                class="platform-developers__content-img"
+                key="collection"
+                v-if="activeTab === 'collection'"
+              />
+              <g-image
+                src="@/assets/images/code.svg"
+                alt=""
+                class="platform-developers__content-img"
+                key="pagination"
+                v-if="activeTab === 'pagination'"
+              />
+            </transition>
+          </div>
+        </mobile-tabs>
         <base-tabs
           v-model="activeTab"
           mode="dark"
@@ -43,7 +70,7 @@
             </p>
           </base-tab-item>
         </base-tabs>
-        <div class="platform-developers__content">
+        <div class="platform-developers__content platform-developers__content--hide-on-mobile">
           <transition name="fade" mode="out-in">
             <g-image
               src="@/assets/images/code.svg"

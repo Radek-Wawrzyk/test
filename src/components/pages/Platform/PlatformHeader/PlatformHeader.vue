@@ -3,8 +3,10 @@
     <main-header
       heading="Versatile Platform with a Rich Variety of Features"
       text="Lottify is an innovative solution that allows you to build and deploy lottery stores with minimum effort."
-      mode="image"
+      mode="video-inline"
       imageURL="https://i.imgur.com/nXNIzJd.png"
+      :videoURL="videoPlatformUrl"
+      videoPoster="https://i.imgur.com/nXNIzJd.png"
     >
       <div class="platform-header__content" slot="content">
         <base-button
@@ -31,8 +33,15 @@
 </template>
 
 <script>
+import VideoPlatformUrl from '@/assets/videos/platform/animation-platform-banner.mp4'
+
 export default {
   name: 'PlatformHeader',
+  data () {
+    return {
+      videoPlatformUrl: VideoPlatformUrl
+    }
+  }
 };
 </script>
 

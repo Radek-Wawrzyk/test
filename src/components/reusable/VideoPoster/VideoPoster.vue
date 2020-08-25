@@ -47,6 +47,7 @@ export default {
   methods: {
     playVideo() {
       this.$store.dispatch('toggleVideoModal');
+      this.$store.dispatch('setVideoModalPath', this.video);
     },
   },
 };

@@ -14,6 +14,8 @@
         v-model="activeTab"
         mode="dark"
         :data="tabs"
+        showLabel
+        labelColor="green"
       >
         <template slot="content">
           <main class="section-whom__content">

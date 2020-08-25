@@ -7,7 +7,7 @@
       autoplay
       class="video-modal__inner"
     >
-      <source src="@/assets/videos/video.mp4" type="video/mp4">
+      <source :src="getVideoModalPath" type="video/mp4">
       Your browser does not support the video tag.
     </video>
     <button class="video-modal__exit">
@@ -22,19 +22,23 @@
 </template>
 
 <script>
-import { mapState } from 'vuex';
+import { mapState, mapGetters } from 'vuex';
 
 export default {
   name: 'VideoModal',
   methods: {
     closeVideoModal() {
       this.$store.dispatch('toggleVideoModal');
+      this.$store.dispatch('setVideoModalPath', '');
     },
   },
   computed: {
     ...mapState({
       isVideoOpen: state => state.videoModal,
     }),
+    ...mapGetters({
+      getVideoModalPath: 'getVideoModalPath'
+    })
   },
   mounted() {
     document.addEventListener('keydown', (event) => {

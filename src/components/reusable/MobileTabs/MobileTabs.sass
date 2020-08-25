@@ -2,13 +2,18 @@
   position: relative
   display: none
   margin: 2rem 0 0 0
+  text-align: center
+
+  &__content
+    text-align: center
 
   &__list
     display: flex
     align-items: center
+    justify-content: center
     flex-wrap: wrap
     list-style: none
-    margin: 0
+    margin: 2rem 0 0 0
     padding: 0
 
   &__item
@@ -16,9 +21,9 @@
     position: relative
 
     &-button
-      width: 40px
-      height: 34px
-      background: rgba($c-brand-blue, 0.1)
+      width: 60px
+      height: 8px
+      background: rgba($c-brand-blue, 0.4)
       border-radius: $border-radius
       display: flex
       align-items: center
@@ -43,11 +48,40 @@
         color: $c-white
         background: $c-brand-blue
 
-      &:hover, &:focus
+      &:hover
         opacity: 0.7
         cursor: pointer
 
+  &__wrapper
+    margin: 0 0 1rem 0
+
+  &__selected-label
+    display: inline-block
+    font-family: Poppins
+    font-style: normal
+    font-weight: bold
+    font-size: 14px
+    line-height: 17px
+    display: inline-flex
+    align-items: center
+    text-align: center
+    border: 2px solid transparent
+    border-radius: $border-radius
+    padding: 0.375rem 0.625rem
+    margin: 0 0.9rem 0 0
+
+    &--blue
+      background-color: rgba($c-brand-blue, 0.2)
+      color: $c-brand-blue
+
+    &--green
+      background-color: rgba($c-brand-green, 0.2)
+      color: $c-brand-green
+
+
   &__selected-name
+    display: inline-block
+    text-align: center
     font-family: Poppins
     font-style: normal
     font-weight: bold
@@ -60,6 +94,7 @@
       color: $c-white
 
   &__selected-text
+    text-align: center
     margin: 2rem 0 0 0
     font-family: Poppins
     font-style: normal

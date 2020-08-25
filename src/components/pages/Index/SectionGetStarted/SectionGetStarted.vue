@@ -16,28 +16,23 @@
         <template slot="content">
           <main class="get-started__content">
             <transition name="fade" mode="out-in">
-              <img
-                class="get-started__content-inner"
-                alt
-                src="@/assets/images/started.png"
-                v-if="activeTab === 'sign'"
-                key="sign"
-              />
+              <video v-if="activeTab === 'sign'" key="sign" controls poster="@/assets/images/started.png"
+                width="100%" height="240"
+                class="get-started__content-video">
+                <source src="@/assets/videos/home/animation-steps-1.mp4" type="video/mp4" />
+              </video>
 
-              <img
-                class="get-started__content-inner"
-                alt
-                src="@/assets/images/started.png"
-                v-if="activeTab === 'set'"
-                key="set"
-              />
-              <img
-                class="get-started__content-inner"
-                alt
-                src="@/assets/images/started.png"
-                v-if="activeTab === 'start'"
-                key="start"
-              />
+              <video v-if="activeTab === 'set'" key="set" controls poster="https://i.imgur.com/aJxUgM5.png"
+                width="100%" height="240"
+                class="get-started__content-video">
+                <source src="@/assets/videos/home/animation-steps-2.mp4" type="video/mp4" />
+              </video>
+
+              <video v-if="activeTab === 'start'" key="start" controls poster="@/assets/images/started.png"
+                width="100%" height="240"
+                class="get-started__content-video">
+                <source src="@/assets/videos/home/animation-steps-1.mp4" type="video/mp4" />
+              </video>
             </transition>
           </main>
         </template>
@@ -68,28 +63,29 @@
         <template slot="content">
           <main class="get-started__content">
             <transition name="fade" mode="out-in">
-              <img
-                class="get-started__content-inner"
-                alt
-                src="@/assets/images/started.png"
-                v-if="activeTab === 'sign'"
-                key="sign"
-              />
+              <video v-if="activeTab === 'sign'" v-video-autoplay:value="videoPlayedState.sign"
+                key="sign" muted poster="@/assets/images/started.png"
+                width="auto" height="400"
+                class="get-started__content-video"
+                @videoPlayed="disableVideoAutoplayFor('sign')">
+                <source src="@/assets/videos/home/animation-steps-1.mp4" type="video/mp4" />
+              </video>
 
-              <img
-                class="get-started__content-inner"
-                alt
-                src="@/assets/images/started.png"
-                v-if="activeTab === 'set'"
-                key="set"
-              />
-              <img
-                class="get-started__content-inner"
-                alt
-                src="@/assets/images/started.png"
-                v-if="activeTab === 'start'"
-                key="start"
-              />
+              <video v-if="activeTab === 'set'" v-video-autoplay:value="videoPlayedState.set"
+                key="set" muted poster="https://i.imgur.com/aJxUgM5.png"
+                width="auto" height="400"
+                class="get-started__content-video"
+                @videoPlayed="disableVideoAutoplayFor('set')">
+                <source src="@/assets/videos/home/animation-steps-2.mp4" type="video/mp4" />
+              </video>
+
+              <video v-if="activeTab === 'start'" v-video-autoplay:value="videoPlayedState.start"
+                key="start" muted poster="@/assets/images/started.png"
+                width="auto" height="400"
+                class="get-started__content-video"
+                @videoPlayed="disableVideoAutoplayFor('start')">
+                <source src="@/assets/videos/home/animation-steps-1.mp4" type="video/mp4" />
+              </video>
             </transition>
           </main>
         </template>
@@ -106,7 +102,17 @@ export default {
   data: () => ({
     activeTab: 'sign',
     tabs: startedTabs,
+    videoPlayedState: {
+      sign: false,
+      set: false,
+      start: false
+    }
   }),
+  methods: {
+    disableVideoAutoplayFor (type) {
+      this.videoPlayedState[type] = true
+    }
+  },
 };
 </script>
 

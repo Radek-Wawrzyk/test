@@ -115,6 +115,13 @@
   .platform-developers
     &__actions
       margin: 5rem auto 0 auto
+
+    &__content
+      margin: 0 0 2rem 0
+
+      &--hide-on-mobile
+        display: none
+
     &__inner
       flex-direction: column
 
@@ -131,3 +138,9 @@
 @media screen and (max-width: 640px)
   .platform-developers
     padding: 5rem 0
+
+    &__actions
+      margin: 3rem 0 0 0
+
+    &__header
+      margin: 0

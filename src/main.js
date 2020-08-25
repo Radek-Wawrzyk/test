@@ -5,8 +5,8 @@ import DefaultLayout from '~/layouts/Default.vue';
 import VueDatamaps from 'vue-datamaps';
 import VueAwesomeSwiper from 'vue-awesome-swiper';
 import store from '@/store/index';
-import Vuex from 'vuex';
 import { ValidationProvider, ValidationObserver } from 'vee-validate/dist/vee-validate.full';
+import './helpers/videoAutoplayDirective'
 // import VueTouch from 'vue-touch';
 import 'swiper/css/swiper.css'
 import '~/assets/sass/main.sass'

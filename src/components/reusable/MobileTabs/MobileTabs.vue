@@ -1,5 +1,43 @@
 <template>
   <nav class="mobile-tabs">
+
+    <transition name="fade" mode="out-in">
+      <div class="mobile-tabs__wrapper" :key="Math.random()">
+        <span
+          class="mobile-tabs__selected-label"
+          :class="[
+            labelColor === 'blue' ? 'mobile-tabs__selected-label--blue' : 'mobile-tabs__selected-label--green'
+          ]"
+          v-if="activeElement.label && showLabel"
+        >
+          {{ activeElement.label }}
+        </span>
+        <h4
+          class="mobile-tabs__selected-name"
+          v-if="activeElement"
+          :key="activeElement.name"
+          :class="[
+            mode === 'dark' ? 'mobile-tabs__selected-name--dark' : '',
+          ]"
+        >
+          {{ activeElement.heading }}
+        </h4>
+      </div>
+
+    </transition>
+    <div class="mobile-tabs__content">
+      <slot name="content"></slot>
+    </div>
+    <transition name="fade" mode="out-in">
+      <p
+        class="mobile-tabs__selected-text"
+        v-if="activeElement && activeElement.text"
+        :key="Math.random()"
+      >
+        {{ activeElement.text }}
+      </p>
+    </transition>
+
     <ul class="mobile-tabs__list">
       <li
         class="mobile-tabs__item"
@@ -16,34 +54,9 @@
           :title="item.heading"
           @click="setTab(item.name)"
         >
-          {{ index + 1}}
         </button>
       </li>
     </ul>
-    <transition name="fade" mode="out-in">
-      <h4
-        class="mobile-tabs__selected-name"
-        v-if="activeElement"
-        :key="activeElement.name"
-        :class="[
-          mode === 'dark' ? 'mobile-tabs__selected-name--dark' : '',
-        ]"
-      >
-        {{ activeElement.heading }}
-      </h4>
-    </transition>
-    <div class="mobile-tabs__content">
-      <slot name="content"></slot>
-    </div>
-    <transition name="fade" mode="out-in">
-      <p
-        class="mobile-tabs__selected-text"
-        v-if="activeElement && activeElement.text"
-        :key="Math.random()"
-      >
-        {{ activeElement.text }}
-      </p>
-    </transition>
   </nav>
 </template>
 
@@ -63,6 +76,16 @@ export default {
     data: {
       type: Array,
       required: true,
+    },
+    showLabel: {
+      type: Boolean,
+      required: false,
+      default: false,
+    },
+    labelColor: {
+      type: String,
+      required: false,
+      default: 'blue',
     },
   },
   methods: {

@@ -7,7 +7,11 @@ export default new Vuex.Store({
   state: {
     mobileMenu: false,
     videoModal: false,
+    videoModalPath: '@/assets/videos/video.mp4',
     navigationScrollBehavior: true,
+  },
+  getters: {
+    'getVideoModalPath': state => state.videoModalPath
   },
   mutations: {
     TOGGLE_MENU(state) {
@@ -19,6 +23,14 @@ export default new Vuex.Store({
     SET_NAVIGATION_SCROLL_BEHAVIOR(state, payload) {
       state.navigationScrollBehavior = payload;
     },
+    /**
+     * 
+     * @param {Object} state
+     * @param {String} payload
+     */
+    SET_VIDEO_MODAL_PATH(state, payload = '') {
+      state.videoModalPath = payload;
+    }
   },
   actions: {
     toggleMenu({ commit }) {
@@ -26,6 +38,9 @@ export default new Vuex.Store({
     },
     toggleVideoModal({ commit }) {
       commit('TOGGLE_VIDEO');
+    },
+    setVideoModalPath({ commit }, payload) {
+      commit('SET_VIDEO_MODAL_PATH', payload)
     },
     enableNavigation({ commit }) {
       commit('SET_NAVIGATION_SCROLL_BEHAVIOR', true);
