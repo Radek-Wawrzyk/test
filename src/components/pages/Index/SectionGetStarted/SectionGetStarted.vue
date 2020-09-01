@@ -75,9 +75,9 @@
 
         <template slot="content">
           <main class="get-started__content">
-            <transition-group name="fade" mode="out-in">
+            <transition name="fade" mode="out-in">
               <video
-                v-show="activeTab === 'sign'"
+                v-if="activeTab === 'sign'"
                 v-video-autoplay
                 key="sign"
                 muted
@@ -88,7 +88,7 @@
               </video>
 
               <video
-                v-show="activeTab === 'set'"
+                v-if="activeTab === 'set'"
                 v-video-autoplay
                 key="set"
                 muted
@@ -99,7 +99,7 @@
               </video>
 
               <video
-                v-show="activeTab === 'start'"
+                v-if="activeTab === 'start'"
                 v-video-autoplay
                 key="start"
                 muted
@@ -108,7 +108,7 @@
               >
                 <source src="@/assets/videos/home/get-started-3.mp4" type="video/mp4" />
               </video>
-            </transition-group>
+            </transition>
           </main>
         </template>
       </base-tabs>
