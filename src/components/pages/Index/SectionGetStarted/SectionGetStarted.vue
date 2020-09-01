@@ -15,20 +15,34 @@
       >
         <template slot="content">
           <main class="get-started__content">
-            <video v-if="activeTab === 'sign'" key="sign" v-video-autoplay
-              width="100%" height="240" muted
-              class="get-started__content-video">
+            <video
+              key="sign"
+              v-video-autoplay
+              width="100%"
+              height="240"
+              muted
+              class="get-started__content-video"
+            >
               <source src="@/assets/videos/home/animation-steps-1.mp4" type="video/mp4" />
             </video>
 
-            <video v-if="activeTab === 'set'" key="set" v-video-autoplay
-              width="100%" height="240" muted
+            <video
+              v-if="activeTab === 'set'"
+              key="set"
+              v-video-autoplay
+              width="100%"
+              height="240"
+              muted
               class="get-started__content-video">
               <source src="@/assets/videos/home/animation-steps-2.mp4" type="video/mp4" />
             </video>
 
-            <video v-if="activeTab === 'start'" key="start" v-video-autoplay
-              width="100%" height="240" muted
+            <video
+              key="start"
+              v-video-autoplay
+              width="100%"
+              height="240"
+              muted
               class="get-started__content-video">
               <source src="@/assets/videos/home/animation-steps-1.mp4" type="video/mp4" />
             </video>
