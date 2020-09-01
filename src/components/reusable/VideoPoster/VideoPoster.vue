@@ -6,13 +6,13 @@
         title="Play video"
         aria-label="Play video"
       >
-        <img
+        <g-image
           class="video-poster__button-icon"
           alt=""
           src="@/assets/icons/video-arrow.svg"
         />
       </button>
-      <img
+      <g-image
         class="video-poster__img"
         alt=""
         :src="poster"

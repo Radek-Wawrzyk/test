@@ -15,12 +15,28 @@
         />
       </main>
 
-      <mobile-tabs
-        v-model="activeTab"
-        mode="light"
-        :data="tabs"
-        showLabel
-      />
+      <div class="section-coverage-mobile__wrapper">
+        <h5 class="section-coverage-mobile__selected-name">
+          {{ selectedTabHeading }}
+        </h5>
+        <ul class="section-coverage-mobile">
+          <li
+            class="section-coverage-mobile__item"
+            v-for="item in tabs"
+            :key="item.heading"
+          >
+            <button
+              class="section-coverage-mobile__button"
+              :class="[
+                item.name === activeTab ? 'section-coverage-mobile__button--active' : '',
+              ]"
+              @click="activeTab = item.name;selectedTabHeading = item.heading"
+            >
+              {{ item.label }}
+            </button>
+          </li>
+        </ul>
+      </div>
 
       <base-tabs
         v-model="activeTab"
@@ -54,6 +70,7 @@ export default {
   name: 'SectionCoverage',
   data: () => ({
     activeTab: 'singapore',
+    selectedTabHeading: '',
     tabs: coverageTabs,
     activePin: null,
     activeCountries: null,
@@ -85,9 +102,8 @@ export default {
       return [
         {
           "title": "Frankfurt",
+          "mobile_title": "Frk",
           "key_name": 'frankfurt',
-          "latitude": 50.110924,
-          "longitude": 8.682127,
           "left": 51,
           "top": 24,
         },
@@ -97,9 +113,8 @@ export default {
       return [
         {
           "title": "New Virginia",
+          "mobile_title": "Vir",
           "key_name": 'new_virgina',
-          "latitude": 37.070831,
-          "longitude": -76.484444,
           "left": 28,
           "top": 34,
         },
@@ -109,9 +124,8 @@ export default {
       return [
         {
           "title": "Singapore",
+          "mobile_title": "Sin",
           "key_name": 'singapore',
-          "latitude": 1.2902,
-          "longitude": 103.8519,
           "left": 83,
           "top": 60,
         },
@@ -230,6 +244,8 @@ export default {
     }
   },
   created() {
+    this.selectedTabHeading = 'Singapore';
+
     switch (this.activeTab) {
       case 'singapore': {
         this.activePin = this.singaporePin[0];

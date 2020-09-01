@@ -34,7 +34,7 @@
                   class="platform-more__tile-features"
                 >
                   <li class="platform-more__tile-features-item">
-                    <img
+                    <g-image
                       class="platform-more__tile-features-icon"
                       alt
                       src="@/assets/icons/benefits-check.svg"

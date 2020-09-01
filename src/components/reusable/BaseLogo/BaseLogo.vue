@@ -1,12 +1,13 @@
 <template>
   <g-link to="/" class="logo">
-    <img
+    <g-image
       :alt="$static.metadata.siteName"
       src="@/assets/images/logo.svg"
       class="logo__image"
       :style="{
         width: `${this.width}rem`
       }"
+      immediate
     />
   </g-link>
 </template>

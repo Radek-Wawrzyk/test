@@ -15,25 +15,23 @@
       >
         <template slot="content">
           <main class="get-started__content">
-            <transition name="fade" mode="out-in">
-              <video v-if="activeTab === 'sign'" key="sign" controls poster="@/assets/images/started.png"
-                width="100%" height="240"
-                class="get-started__content-video">
-                <source src="@/assets/videos/home/animation-steps-1.mp4" type="video/mp4" />
-              </video>
+            <video v-if="activeTab === 'sign'" key="sign" v-video-autoplay
+              width="100%" height="240" muted
+              class="get-started__content-video">
+              <source src="@/assets/videos/home/animation-steps-1.mp4" type="video/mp4" />
+            </video>
 
-              <video v-if="activeTab === 'set'" key="set" controls poster="https://i.imgur.com/aJxUgM5.png"
-                width="100%" height="240"
-                class="get-started__content-video">
-                <source src="@/assets/videos/home/animation-steps-2.mp4" type="video/mp4" />
-              </video>
+            <video v-if="activeTab === 'set'" key="set" v-video-autoplay
+              width="100%" height="240" muted
+              class="get-started__content-video">
+              <source src="@/assets/videos/home/animation-steps-2.mp4" type="video/mp4" />
+            </video>
 
-              <video v-if="activeTab === 'start'" key="start" controls poster="@/assets/images/started.png"
-                width="100%" height="240"
-                class="get-started__content-video">
-                <source src="@/assets/videos/home/animation-steps-1.mp4" type="video/mp4" />
-              </video>
-            </transition>
+            <video v-if="activeTab === 'start'" key="start" v-video-autoplay
+              width="100%" height="240" muted
+              class="get-started__content-video">
+              <source src="@/assets/videos/home/animation-steps-1.mp4" type="video/mp4" />
+            </video>
           </main>
         </template>
       </mobile-tabs>
@@ -63,28 +61,28 @@
         <template slot="content">
           <main class="get-started__content">
             <transition name="fade" mode="out-in">
-              <video v-if="activeTab === 'sign'" v-video-autoplay:value="videoPlayedState.sign"
-                key="sign" muted poster="@/assets/images/started.png"
-                width="auto" height="400"
+              <video v-if="activeTab === 'sign'" v-video-autoplay
+                key="sign" muted
+                width="auto" height="500"
                 class="get-started__content-video"
-                @videoPlayed="disableVideoAutoplayFor('sign')">
-                <source src="@/assets/videos/home/animation-steps-1.mp4" type="video/mp4" />
+              >
+                <source src="@/assets/videos/home/get-started-1.mp4" type="video/mp4" />
               </video>
 
-              <video v-if="activeTab === 'set'" v-video-autoplay:value="videoPlayedState.set"
-                key="set" muted poster="https://i.imgur.com/aJxUgM5.png"
-                width="auto" height="400"
+              <video v-if="activeTab === 'set'" v-video-autoplay
+                key="set" muted
+                width="auto" height="500"
                 class="get-started__content-video"
-                @videoPlayed="disableVideoAutoplayFor('set')">
-                <source src="@/assets/videos/home/animation-steps-2.mp4" type="video/mp4" />
+              >
+                <source src="@/assets/videos/home/get-started-2.mp4" type="video/mp4" />
               </video>
 
-              <video v-if="activeTab === 'start'" v-video-autoplay:value="videoPlayedState.start"
-                key="start" muted poster="@/assets/images/started.png"
-                width="auto" height="400"
+              <video v-if="activeTab === 'start'" v-video-autoplay
+                key="start" muted
+                width="auto" height="500"
                 class="get-started__content-video"
-                @videoPlayed="disableVideoAutoplayFor('start')">
-                <source src="@/assets/videos/home/animation-steps-1.mp4" type="video/mp4" />
+              >
+                <source src="@/assets/videos/home/get-started-3.mp4" type="video/mp4" />
               </video>
             </transition>
           </main>
@@ -101,18 +99,8 @@ export default {
   name: 'SectionGetStarted',
   data: () => ({
     activeTab: 'sign',
-    tabs: startedTabs,
-    videoPlayedState: {
-      sign: false,
-      set: false,
-      start: false
-    }
-  }),
-  methods: {
-    disableVideoAutoplayFor (type) {
-      this.videoPlayedState[type] = true
-    }
-  },
+    tabs: startedTabs
+  })
 };
 </script>
 

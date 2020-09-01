@@ -11,7 +11,7 @@
       />
       <div class="platform-licences__content">
         <div class="platform-licences-slide">
-          <img
+          <g-image
             class="platform-licences-slide__img"
             alt=""
             src="@/assets/images/platform/license.png"
@@ -23,7 +23,7 @@
           </p>
         </div>
         <div class="platform-licences-slide platform-licences-slide--soon">
-          <img
+          <g-image
             class="platform-licences-slide__img"
             alt=""
             src="@/assets/images/platform/soon-license.png"
@@ -46,7 +46,7 @@
           class="platform-licences-slide__inner"
         >
           <div class="platform-licences-slide">
-            <img
+            <g-image
               class="platform-licences-slide__img"
               alt=""
               src="@/assets/images/platform/compliance.png"
@@ -63,7 +63,7 @@
           @click="goPrev()"
           v-if="!this.commingSoon"
         >
-          <img
+          <g-image
             class="platform-licences__slider-button-icon"
             alt=""
             src="@/assets/icons/blue-btn-prev.svg"
@@ -75,7 +75,7 @@
           @click="goNext()"
           v-if="!this.commingSoon"
         >
-          <img
+          <g-image
             class="platform-licences__slider-button-icon"
             alt=""
             src="@/assets/icons/blue-btn-next.svg"

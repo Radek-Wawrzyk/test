@@ -2,15 +2,14 @@
   <section class="faq-info">
     <div class="container container--big">
       <div class="faq-info__inner">
-        <h3 class="faq-info__tabs-heading faq-info__tabs-heading--mobile">
-          Topic
-        </h3>
-        <mobile-tabs
-          v-model="activeTab"
-          mode="light"
-          :data="tabs"
-        >
-          <template slot="content">
+        <div class="faq-info__mobile">
+          <mobile-resource-filtration
+            heading="Topic"
+            :data="tabs"
+            v-model="activeTab"
+          />
+
+          <div class="faq-info__content-list">
             <transition name="fade" mode="out-in">
               <base-accordion
                 v-model="activeFAQ"
@@ -35,7 +34,7 @@
                     <h4 class="faq-info-question__heading">
                       {{ item.name }}
                     </h4>
-                    <img
+                    <g-image
                       src="@/assets/icons/chevron.svg"
                       alt=""
                       class="faq-info-question__icon"
@@ -69,7 +68,7 @@
                     <h4 class="faq-info-question__heading">
                       {{ item.name }}
                     </h4>
-                    <img
+                    <g-image
                       src="@/assets/icons/chevron.svg"
                       alt=""
                       class="faq-info-question__icon"
@@ -103,7 +102,7 @@
                     <h4 class="faq-info-question__heading">
                       {{ item.name }}
                     </h4>
-                    <img
+                    <g-image
                       src="@/assets/icons/chevron.svg"
                       alt=""
                       class="faq-info-question__icon"
@@ -137,7 +136,7 @@
                     <h4 class="faq-info-question__heading">
                       {{ item.name }}
                     </h4>
-                    <img
+                    <g-image
                       src="@/assets/icons/chevron.svg"
                       alt=""
                       class="faq-info-question__icon"
@@ -149,8 +148,8 @@
                 </base-accordion-item>
               </base-accordion>
             </transition>
-          </template>
-        </mobile-tabs>
+          </div>
+        </div>
 
         <div class="faq-info__content">
           <div class="faq-info__tabs">
@@ -202,7 +201,7 @@
                     <h4 class="faq-info-question__heading">
                       {{ item.name }}
                     </h4>
-                    <img
+                    <g-image
                       src="@/assets/icons/chevron.svg"
                       alt=""
                       class="faq-info-question__icon"
@@ -236,7 +235,7 @@
                     <h4 class="faq-info-question__heading">
                       {{ item.name }}
                     </h4>
-                    <img
+                    <g-image
                       src="@/assets/icons/chevron.svg"
                       alt=""
                       class="faq-info-question__icon"
@@ -270,7 +269,7 @@
                     <h4 class="faq-info-question__heading">
                       {{ item.name }}
                     </h4>
-                    <img
+                    <g-image
                       src="@/assets/icons/chevron.svg"
                       alt=""
                       class="faq-info-question__icon"
@@ -304,7 +303,7 @@
                     <h4 class="faq-info-question__heading">
                       {{ item.name }}
                     </h4>
-                    <img
+                    <g-image
                       src="@/assets/icons/chevron.svg"
                       alt=""
                       class="faq-info-question__icon"

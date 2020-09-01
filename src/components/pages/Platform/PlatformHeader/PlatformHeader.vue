@@ -33,7 +33,7 @@
 </template>
 
 <script>
-import VideoPlatformUrl from '@/assets/videos/platform/animation-platform-banner.mp4'
+import VideoPlatformUrl from '@/assets/videos/platform/header.mp4'
 
 export default {
   name: 'PlatformHeader',

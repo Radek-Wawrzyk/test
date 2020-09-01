@@ -4,6 +4,12 @@
   margin: 2rem 0 0 0
   text-align: center
 
+  &__pagination
+    width: 100%
+    display: flex
+    justify-content: center
+    margin: 5rem 0 0 0
+
   &__content
     text-align: center
 
@@ -13,7 +19,7 @@
     justify-content: center
     flex-wrap: wrap
     list-style: none
-    margin: 2rem 0 0 0
+    margin: 5rem 0 0 0
     padding: 0
 
   &__item
@@ -36,21 +42,26 @@
       font-weight: bold
       font-size: 0.9rem
       color: $c-brand-blue
+      opacity: 0.4
 
-      &--dark
-        background: rgba($c-brand-green, 0.1)
-        color: $c-brand-green
-
-        &.mobile-tabs__item-button--active
-          background: $c-brand-green
-
-      &--active
+      &.swiper-pagination-bullet-active
         color: $c-white
         background: $c-brand-blue
+        opacity: 1
 
       &:hover
         opacity: 0.7
         cursor: pointer
+
+  &__pagination
+    &--dark
+      .mobile-tabs__item-button
+        background: rgba($c-brand-green, 0.2)
+        color: $c-brand-green
+        margin: 0 4px
+
+      .mobile-tabs__item-button.swiper-pagination-bullet-active
+        background: $c-brand-green
 
   &__wrapper
     margin: 0 0 1rem 0

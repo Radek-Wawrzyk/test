@@ -15,7 +15,7 @@
           v-for="item in compliance"
           :key="item.name"
         >
-          <img
+          <g-image
             class="platform-compliance__item-img"
             alt=""
             src="@/assets/images/platform/compliance.png"

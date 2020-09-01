@@ -1,0 +1,487 @@
+.platform-architecture
+    position: relative
+    padding: 9rem 0
+    background-color: $c-dark-bg
+    &__imgarea
+      display: grid
+      grid-template-columns: repeat(3, 1fr) !important
+    &__tabs
+        padding-top: 1.5rem
+    .base-tab-item--active
+        .platform-architecture-tab__heading
+          color:rgba($c-white, 0.6) !important
+    .step
+      opacity: 0.2
+      position: relative
+      display: flex
+      flex-direction: column
+      transition: opacity .5s ease-in-out
+      &--1
+          align-items: center
+          .hlines__wrapper
+            height: 90px
+          &.active
+            .hlines__wrapper
+              position: absolute
+              bottom: 152px
+              height: 90px
+              width: 132px
+              .hline__pulse
+                &--bottom
+                  bottom: -2px
+      &--2
+          justify-content: flex-end
+          &.active
+            .vlines__wrapper
+                .vline
+                    &:after
+                        content: ''
+                        display: block
+                        position: absolute
+                        width: 45%
+                        height: 2px
+                        background: $c-brand-green
+                        top: 0
+                    &--top
+                        &:after
+                            left: 0
+                            animation: moveRight 1.5s infinite
+                    &--bottom
+                        &:after
+                            right: 0
+                            animation: moveLeft 1.5s infinite
+
+                &--right
+                  .vline
+                    &--top
+                      &:after
+                          right: 0
+                          left: inherit
+                          animation: moveLeft 1.5s infinite
+
+                    &--bottom
+                        &:after
+                            left: 0
+                            right: inherit
+                            animation: moveRight 1.5s infinite
+      &--3
+          justify-content: flex-end
+          align-items: center
+      &.active
+          opacity: 1
+
+      .iconwrapper
+          margin-bottom: 70px
+          &--right
+              margin-bottom: 116px
+      .mb-2
+          margin-bottom: 1.5rem
+      .architecture__button
+          margin-top: 1.5rem
+          width: 100%
+          height: 42px
+          min-height: 42px
+          padding: 0
+          &--soft
+              min-width: 226px
+              max-width: 226px
+              background-color: rgba($c-brand-blue, 1) !important
+
+              .base-button__text
+                  color: $c-white
+          &--sm
+              max-width: 178px
+              background-color: rgba($c-brand-green, 0.8)
+              border: none
+          &--xs
+              max-width: 163px
+              background-color: rgba($c-brand-green, 0.8)
+              border: none
+
+          .base-button
+              min-height: 42px !important
+          .base-button__text
+              height: 32px !important
+              text-transform: uppercase
+              font-size: 14px !important
+              font-weight: 400 !important
+              display: flex
+              align-items: center
+
+.architecture__tabs .base-tabs__list
+    grid-template-columns: repeat(3, 1fr) !important
+
+.platform-architecture-tab__heading
+    font-size: 15px !important
+    line-height: inherit !important
+    font-weight: 400 !important
+
+.platform-architecture
+
+  .base-header__heading
+    color: $c-white
+
+  .base-header__text
+    min-width: 535px
+
+  &-content
+    position: relative
+    display: flex
+    justify-content: space-between
+    text-align: left
+
+    &__img
+      width: 100%
+      max-width: 640px
+
+    &__tile
+      padding: 3rem 0 0 0
+      max-width: 520px
+      width: 100%
+      display: flex
+
+      &-content
+        margin: 0.8rem 0 0 1.8rem
+
+      &-icon
+        position: relative
+        display: block
+        width: 65px
+        height: 65px
+        min-width: 65px
+        z-index: 1
+        display: flex
+        align-items: center
+        justify-content: center
+        background: $c-brand-blue-light
+        border-radius: 50%
+        margin: 0
+
+      &-heading
+        font-family: Poppins
+        font-style: normal
+        font-weight: bold
+        font-size: 1.25rem
+        line-height: 1.75rem
+        margin: 0 0 1.125rem 0
+        color: $text-color
+
+      &-text
+        font-family: Poppins
+        font-style: normal
+        font-weight: 500
+        font-size: 0.9375rem
+        line-height: 1.75rem
+        color: rgba($c-white, 0.6)
+
+      &-features
+        margin: 22px 0 0 0
+        padding: 0
+        list-style: none
+
+        &-item
+          display: flex
+          align-items: center
+
+        &-icon
+         margin: 0 20px 0 0
+
+        &-text
+          font-family: Poppins
+          font-style: normal
+          font-weight: 500
+          font-size: 15px
+          line-height: 28px
+          color: #141A37
+
+  &__header
+    width: 100%
+    max-width: 420px
+    color: $c-white
+
+    .base-header__text
+      font-size: 15px
+      font-weight: 400
+      color: rgba($c-white, 0.6)
+
+  &__imagarea
+    outline:red
+
+  &__content
+    margin: 4.2em 0 5.6rem 0
+    text-align: center
+
+    &-inner
+      width: auto
+      display: inline-block
+
+  &-tab
+    position: relative
+    text-align: left
+
+    .base-tab-item__button
+      padding: 0 1rem
+      text-align: center
+
+    &.base-tab-item--active
+      .platform-architecture-tab__label
+        color: $c-white
+
+    &__heading
+      font-family: Poppins
+      font-style: normal
+      font-weight: bold
+      font-size: 1rem
+      line-height: 2.8rem
+      color: rgba($c-white, 0.2)
+
+.vlines__wrapper
+    position: absolute
+    bottom: 68px
+    height: 82px
+    width: 31%
+    &--left
+        left: -31%
+    &--right
+        right: -31%
+    .vline
+        width: 100%
+        height: 2px
+        position: absolute
+        overflow: hidden
+        &--green
+            background: rgba($c-brand-green, 0.2)
+        &--top
+            top: 14px
+        &--bottom
+            bottom: 14px
+        &__img
+            position: absolute
+            top: 50%
+            margin-top: -12px
+            left: 50%
+            margin-left: -12px
+
+.step
+    &.active
+      .hlines__wrapper
+        position: absolute
+        bottom: 152px
+        height: 116px
+        width: 132px
+        .hline
+            height: 100%
+            width: 2px
+            position: absolute
+            overflow: hidden
+            &:after
+              content: ''
+              display: block
+              position: absolute
+              height: 45%
+              width: 2px
+            &--left
+                  &:after
+                    top: 0
+                    animation: moveTop 1.5s infinite
+                    background: $c-brand-green
+            &--right
+                &:after
+                    bottom: 0
+                    animation: moveBottom 1.5s infinite
+                    background: $c-brand-blue
+            &__pulse
+                position: absolute
+                border-radius: 50%
+                box-shadow: 0 0 0 0 rgba(0, 0, 0, 1)
+                height: 10px
+                width: 10px
+                transform: scale(1)
+                animation: pulse-green 2s infinite
+                &--top
+                    top: -5px
+                    right: 26px
+                    background: $c-brand-blue
+                &--bottom
+                    bottom: -5px
+                    left: 26px
+                    background: $c-brand-green
+      .vline
+            &__pulse
+                position: absolute
+                background: $c-brand-green
+                border-radius: 50%
+                box-shadow: 0 0 0 0 rgba(0, 0, 0, 1)
+                height: 10px
+                width: 10px
+                transform: scale(1)
+                animation: pulse-green 2s infinite
+                &--top
+                    top: 10px
+                    right: -6px
+                &--bottom
+                    bottom: 10px
+                    left: -6px
+
+@keyframes moveTop
+  0%
+    top: -200%
+
+  60%
+    top: 100%
+
+  100%
+    top: 100%
+
+@keyframes moveBottom
+  0%
+    bottom: -200%
+
+  60%
+    bottom: 100%
+
+  100%
+    bottom: 100%
+
+
+@keyframes moveLeft
+  0%
+    right: -200%
+
+  60%
+    right: 100%
+
+  100%
+    right: 100%
+
+@keyframes moveRight
+  0%
+    left: -200%
+
+  60%
+    left: 100%
+
+  100%
+    left: 100%
+
+.hlines__wrapper
+    position: absolute
+    bottom: 152px
+    height: 116px
+    width: 132px
+    .hline
+        height: 100%
+        width: 2px
+        position: absolute
+        overflow: hidden
+        &--green
+            background: rgba($c-brand-green, 0.2)
+        &--blue
+            background: rgba($c-brand-blue, 0.2)
+        &--left
+            left: 30px
+        &--right
+            right: 30px
+        &__img
+            position: absolute
+            top: 50%
+            margin-top: -12px
+            left: 50%
+            margin-left: -12px
+
+
+.hline__img
+    position: absolute
+    left: 50%
+    margin-left: -12px
+    margin-top: -12px
+    top: 50%
+
+.gateway-wrapper
+    position: relative
+
+@keyframes pulse-blue
+  0%
+    transform: scale(0.95)
+    box-shadow: 0 0 0 0 rgba($c-brand-blue, 0.7)
+
+  70%
+    transform: scale(1)
+    box-shadow: 0 0 0 10px rgba($c-brand-blue, 0)
+
+  100%
+    transform: scale(0.95)
+    box-shadow: 0 0 0 0 rgba($c-brand-blue, 0)
+
+@keyframes pulse-green
+  0%
+    transform: scale(0.95)
+    box-shadow: 0 0 0 0 rgba($c-brand-green, 0.7)
+
+  70%
+    transform: scale(1)
+    box-shadow: 0 0 0 10px rgba($c-brand-green, 0)
+
+  100%
+    transform: scale(0.95)
+    box-shadow: 0 0 0 0 rgba($c-brand-green, 0)
+
+@media screen and (max-width: 1200px)
+  .platform-architecture .base-header__text
+    min-width: 100%
+
+@media screen and (max-width: 1024px)
+  .vlines__wrapper
+      display: none
+  .platform-architecture__imgarea
+      grid-template-columns: 0.5fr 1fr 0.5fr !important
+      grid-gap: 12px
+  .platform-architecture
+    .base-tabs
+      display: flex
+@media screen and (max-width: 767px)
+  .platform-architecture
+    .step.active .hlines__wrapper .hline__pulse--bottom
+      left: 10%
+      margin-left: -4px
+      bottom: -4px
+    .step.active .hlines__wrapper .hline__pulse--top
+      top: -4px
+      right: 10%
+      margin-right: -4px
+    .architecture__tabs
+      .base-tabs__list
+          grid-template-columns: 0.5fr 1fr 0.5fr
+          grid-gap: 12px
+    .platform-architecture-tab__heading
+      font-size: 3vw !important
+    .step.active
+      .hlines__wrapper
+        position: relative
+        width: 100%
+        bottom: inherit
+        height: 80px
+    .hlines__wrapper
+      position: relative
+      width: 100%
+      bottom: inherit
+      height: 80px
+    &__content
+      margin-bottom: 20px
+    .step--1.active .hlines__wrapper
+      position: relative
+      bottom: inherit
+      width: 100%
+    .step .iconwrapper
+      margin-bottom: 0
+    .hlines__wrapper .hline--right
+        right: 10%
+    .hlines__wrapper .hline--left
+      left: 10%
+    .step
+      justify-content: flex-end
+      &--1
+        .iconwrapper
+          margin-bottom: -14%
+      .architecture__button
+        display: none

@@ -102,6 +102,10 @@ export default {
         return;
       }
 
+      if (this.isMenuOpen) {
+        return;
+      }
+
       this.showNavbar = this.currentScrollPosition < this.lastScrollPosition;
       this.lastScrollPosition = this.currentScrollPosition;
     },

@@ -94,7 +94,6 @@ export default {
       this.activeLineOffset = element.offsetLeft;
     },
     navChecker(payload) {
-      console.log(payload)
       payload.forEach(entry => {
         if (this.isLoaded) {
           this.activeSection = entry.target.id;

@@ -9,14 +9,21 @@ class VideoAutoplay {
   get config () {
     return {
       threshold: 1,
-      rootMargin: '0px 0px -15% 0px'
+      rootMargin: '0px 0px -10% 0px'
     }
+  }
+
+  /**
+   * @description By default, if no binding value provided we assuming that autoplay is allowed. Otherwise we need to check for binding input.
+   */
+  get autoplayAllowed () {
+    return this.binding?.value || true
   }
 
   setAutoplayOnElementIntersect () {
     const io = new IntersectionObserver(entries => {
       entries.forEach(entry => {
-        if (entry.isIntersecting && !this.binding.value) {
+        if (entry.isIntersecting && this.autoplayAllowed) {
           entry.target.play()
           entry.target.dispatchEvent(new Event('videoPlayed'))
           this.toggleBindingValue()

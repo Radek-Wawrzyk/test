@@ -113,6 +113,14 @@
         margin: 0 0 2rem 0
 
 
+@media screen and (max-width: 768px)
+  .main-footer
+    &-top
+      &__navigation
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        grid-gap: 3rem 3rem
+
+
 @media screen and (max-width: 576px)
   .main-footer
     &-top
@@ -148,6 +156,7 @@
           &__list
             justify-content: center
             width: 100%
+
 
 @media screen and (max-width: 640px)
   .main-footer

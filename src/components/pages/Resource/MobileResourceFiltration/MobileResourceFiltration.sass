@@ -1,0 +1,41 @@
+.mobile-resource-filtration
+  position: relative
+  margin: 0 0 2rem 0
+  width: 100%
+
+  &__heading
+    margin: 0 0 2rem 0
+
+  &__active-line
+    transition: all $time
+    height: 5px
+    border-radius: 5px
+    background-color: $c-brand-blue
+
+  &__list
+    width: 100%
+    display: block
+    list-style: none
+    padding: 0 0 0.5rem 0
+    margin: 0
+    overflow-x: auto
+    white-space: nowrap
+
+  &__item
+    margin: 0 1.5rem 0 0
+    display: inline-block
+
+    &:last-child
+      margin: 0
+
+  &__button
+    font-size: 1rem
+    padding: 1rem 0
+    background: none
+    border: none
+    width: auto
+    white-space: nowrap
+    text-align: left
+
+    &--active
+      color: $c-brand-blue

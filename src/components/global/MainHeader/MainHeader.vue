@@ -30,12 +30,18 @@
           v-if="mode === 'video' && videoPoster && videoURL"
         />
 
-        <video v-else-if="mode === 'video-inline' && videoPoster && videoURL"
-          v-video-autoplay:value="false" :poster="videoPoster"
-          muted width="auto" height="240" class="main-header__info-video">
+        <video
+          v-else-if="mode === 'video-inline' && videoPoster && videoURL"
+          v-video-autoplay:value="false"
+          :poster="videoPoster"
+          muted
+          width="auto"
+          height="240"
+          class="main-header__info-video"
+        >
           <source :src="videoURL" type="video/mp4" />
         </video>
-        
+
         <g-image
           v-else-if="mode === 'image' && imageURL"
           class="main-header__info-img"

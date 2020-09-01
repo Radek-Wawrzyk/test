@@ -6,7 +6,7 @@
       labelText="Lottify is now available in <b>New Jersey</b> and <b>New York, US</b>"
       labelValue="New"
       mode="video"
-      videoURL="https://i.imgur.com/nXNIzJd.png"
+      :videoURL="homePageVideoUrl"
       videoPoster="https://i.imgur.com/aJxUgM5.png"
       videoText="See How the Platform Works"
     >
@@ -39,8 +39,15 @@
 </template>
 
 <script>
+import HomePageVideoUrl from '@/assets/videos/home/lottify-prev01.mp4'
+
 export default {
   name: 'PlatformHeader',
+  data () {
+    return {
+      homePageVideoUrl: HomePageVideoUrl
+    }
+  },
   methods: {
     scrollDown() {
       const target = document.querySelector('.get-started');

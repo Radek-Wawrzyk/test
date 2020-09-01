@@ -104,7 +104,7 @@ export default {
     },
   },
   mounted() {
-    this.moveActiveLine(this.value);
+    this.setTab(this.value);
   },
   methods: {
     moveActiveLine(payload) {

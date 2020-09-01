@@ -2,7 +2,6 @@
   <section class="platform-benefits platform-section" id="benefits">
     <div class="platform-benefits__content">
       <base-header
-        mode="dark"
         align="center"
         class="platform-benefits__header"
         heading="You gain a whole lot by using our platform "
@@ -87,20 +86,20 @@
               @click="goPrev()"
               class="platform-benefits-carousel__actions-button"
             >
-              <img
+              <g-image
                 class="platform-benefits__slider-button-icon"
                 alt=""
-                src="@/assets/icons/green-btn-prev.svg"
+                src="@/assets/icons/platform/benefits-button.png"
               />
             </button>
             <button
               @click="goNext()"
               class="platform-benefits-carousel__actions-button"
             >
-              <img
-                class="platform-benefits__slider-button-icon"
+              <g-image
+                class="platform-benefits-carousel__actions-icon platform-benefits-carousel__actions-icon--right"
                 alt=""
-                src="@/assets/icons/green-btn-next.svg"
+                src="@/assets/icons/platform/benefits-button.png"
               />
             </button>
           </div>

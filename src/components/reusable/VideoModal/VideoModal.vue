@@ -11,7 +11,7 @@
       Your browser does not support the video tag.
     </video>
     <button class="video-modal__exit">
-      <img
+      <g-image
         class="video-modal__exit-inner"
         alt=""
         src="@/assets/icons/exit.svg"

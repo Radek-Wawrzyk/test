@@ -1,9 +1,46 @@
 .resource-info
   padding: 9rem 0
   position: relative
+  overflow-x: hidden
+
+  &-mobile
+    position: relative
+    margin: 0 0 2rem 0
+    width: 100%
+
+    &__heading
+      margin: 0 0 2rem 0
+
+    &__list
+      width: 100%
+      display: block
+      list-style: none
+      padding: 0
+      margin: 0
+      overflow-x: hidden
+      overflow-x: scroll
+      white-space: nowrap
+      padding: 0.5rem 0
+
+    &__item
+      margin: 0 1.5rem 0 0
+      display: inline-block
+
+      &:last-child
+        margin: 0
+
+    &__button
+      font-size: 1rem
+      background: none
+      border: none
+      width: auto
+      white-space: nowrap
+      text-align: left
 
   &__mobile
     display: none
+    width: 100%
+    margin: 0 0 5rem 0
 
   &__inner
     width: 100%

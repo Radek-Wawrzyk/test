@@ -6,9 +6,7 @@
     <platform-features />
     <platform-more />
     <platform-benefits />
-    <section class="platform-section platform-architecture" id="architecture" style="padding: 9rem 0">
-
-    </section>
+    <platform-architecture />
     <platform-developers />
     <platform-compliance />
     <platform-licences />

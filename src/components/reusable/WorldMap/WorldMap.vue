@@ -2595,7 +2595,7 @@
       }"
     >
       <span class="world-map__marker-dot" />
-      <p class="world-map__marker-label">
+      <p class="world-map__marker-label world-map__marker-label--desktop">
         {{ marker.title }}
       </p>
     </div>

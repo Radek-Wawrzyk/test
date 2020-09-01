@@ -19,27 +19,52 @@
         >
           <div class="platform-developers__content" slot="content">
             <transition name="fade" mode="out-in">
-              <g-image
-                src="@/assets/images/code.svg"
-                alt=""
-                class="platform-developers__content-img"
+              <video
+                v-video-autoplay
                 key="entity"
-                v-if="activeTab === 'entity'"
-              />
-              <g-image
+                muted
+                width="auto"
+                height="500"
+                class="platform-developers__content-img"
+              >
+                <source src="@/assets/videos/platform/code_1.mp4" type="video/mp4" />
+              </video>
+
+              <video
+                v-video-autoplay
+                key="collection"
+                muted
+                width="auto"
+                height="500"
+                class="platform-developers__content-img"
+              >
+                <source src="@/assets/videos/platform/code_1.mp4" type="video/mp4" />
+              </video>
+
+              <video
+                v-video-autoplay
+                key="pagination"
+                muted
+                width="auto"
+                height="500"
+                class="platform-developers__content-img"
+              >
+                <source src="@/assets/videos/platform/code_1.mp4" type="video/mp4" />
+              </video>
+              <!-- <g-image
                 src="@/assets/images/code.svg"
                 alt=""
                 class="platform-developers__content-img"
                 key="collection"
                 v-if="activeTab === 'collection'"
-              />
-              <g-image
+              /> -->
+              <!-- <g-image
                 src="@/assets/images/code.svg"
                 alt=""
                 class="platform-developers__content-img"
                 key="pagination"
                 v-if="activeTab === 'pagination'"
-              />
+              /> -->
             </transition>
           </div>
         </mobile-tabs>
@@ -72,7 +97,42 @@
         </base-tabs>
         <div class="platform-developers__content platform-developers__content--hide-on-mobile">
           <transition name="fade" mode="out-in">
-            <g-image
+            <video
+              v-video-autoplay
+              key="entity"
+              muted
+              width="auto"
+              height="500"
+              class="platform-developers__content-img"
+              v-if="activeTab === 'entity'"
+            >
+              <source src="@/assets/videos/platform/code_1.mp4" type="video/mp4" />
+            </video>
+
+            <video
+              v-video-autoplay
+              key="collection"
+              muted
+              width="auto"
+              height="500"
+              class="platform-developers__content-img"
+              v-if="activeTab === 'collection'"
+            >
+              <source src="@/assets/videos/platform/code_1.mp4" type="video/mp4" />
+            </video>
+
+            <video
+              v-video-autoplay
+              key="pagination"
+              muted
+              width="auto"
+              height="500"
+              class="platform-developers__content-img"
+              v-if="activeTab === 'pagination'"
+            >
+              <source src="@/assets/videos/platform/code_1.mp4" type="video/mp4" />
+            </video>
+            <!-- <g-image
               src="@/assets/images/code.svg"
               alt=""
               class="platform-developers__content-img"
@@ -92,7 +152,7 @@
               class="platform-developers__content-img"
               key="pagination"
               v-if="activeTab === 'pagination'"
-            />
+            /> -->
           </transition>
         </div>
       </div>

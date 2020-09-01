@@ -29,7 +29,7 @@
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing. Eiusmod tempor incididunt ut
                   labore et dolore magna aliqua. <br/><br/> Lorem ipsum dolor sit amet, consectetur adipiscing. Eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
-                <img
+                <g-image
                   class="section-whom__content-img"
                   alt
                   src="@/assets/images/whom.png"
@@ -44,7 +44,7 @@
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing. Eiusmod tempor incididunt ut
                   labore et dolore magna aliqua. <br/><br/> Lorem ipsum dolor sit amet, consectetur adipiscing. Eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
-                <img
+                <g-image
                   class="section-whom__content-img"
                   alt
                   src="@/assets/images/whom.png"
@@ -59,7 +59,7 @@
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing. Eiusmod tempor incididunt ut
                   labore et dolore magna aliqua. <br/><br/> Lorem ipsum dolor sit amet, consectetur adipiscing. Eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
-                <img
+                <g-image
                   class="section-whom__content-img"
                   alt
                   src="@/assets/images/whom.png"
@@ -74,7 +74,7 @@
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing. Eiusmod tempor incididunt ut
                   labore et dolore magna aliqua. <br/><br/> Lorem ipsum dolor sit amet, consectetur adipiscing. Eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
-                <img
+                <g-image
                   class="section-whom__content-img"
                   alt
                   src="@/assets/images/whom.png"
@@ -118,7 +118,7 @@
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing. Eiusmod tempor incididunt ut
                   labore et dolore magna aliqua. <br/><br/> Lorem ipsum dolor sit amet, consectetur adipiscing. Eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
-                <img
+                <g-image
                   class="section-whom__content-img"
                   alt
                   src="@/assets/images/whom.png"
@@ -133,7 +133,7 @@
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing. Eiusmod tempor incididunt ut
                   labore et dolore magna aliqua. <br/><br/> Lorem ipsum dolor sit amet, consectetur adipiscing. Eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
-                <img
+                <g-image
                   class="section-whom__content-img"
                   alt
                   src="@/assets/images/whom.png"
@@ -148,7 +148,7 @@
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing. Eiusmod tempor incididunt ut
                   labore et dolore magna aliqua. <br/><br/> Lorem ipsum dolor sit amet, consectetur adipiscing. Eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
-                <img
+                <g-image
                   class="section-whom__content-img"
                   alt
                   src="@/assets/images/whom.png"
@@ -163,7 +163,7 @@
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing. Eiusmod tempor incididunt ut
                   labore et dolore magna aliqua. <br/><br/> Lorem ipsum dolor sit amet, consectetur adipiscing. Eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
-                <img
+                <g-image
                   class="section-whom__content-img"
                   alt
                   src="@/assets/images/whom.png"

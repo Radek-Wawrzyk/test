@@ -18,9 +18,6 @@
             :sub-heading="subTitle"
             aling="left"
             class="features-content__info-header"
-            :class="[
-              mode === 'benefits' ? 'features-content__info-header--green' : '',
-            ]"
           />
           <p class="features-content__info-sub-text">
            {{ subText }}
@@ -52,9 +49,6 @@
           >
             <figure
               class="features-tile__icon"
-              :class="[
-                mode === 'benefits' ? 'features-tile__icon--green' : '',
-              ]"
             >
               <g-image
                 class="features-tile__icon-inner"
@@ -80,7 +74,7 @@
                   class="features-tile__features"
                 >
                   <li class="features-tile__features-item">
-                    <img
+                    <g-image
                       class="features-tile__features-icon"
                       alt
                       src="@/assets/icons/benefits-check.svg"
@@ -96,9 +90,6 @@
           <div class="features-tile">
             <figure
               class="features-tile__icon"
-              :class="[
-                mode === 'benefits' ? 'features-tile__icon--green' : '',
-              ]"
             >
               <g-image
                 class="features-tile__icon-inner"

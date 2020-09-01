@@ -13,19 +13,19 @@
             class="home-stories-slide__inner"
           >
             <div class="home-stories-slide__content">
-              <img
+              <g-image
                 class="home-stories-slide__content-logo"
                 src="@/assets/images/stories-logo.png"
                 alt=""
               />
-              <img
+              <g-image
                 class="home-stories-slide__content-img"
                 src="@/assets/images/stories.png"
                 alt=""
               />
               <div class="home-stories-slide-info">
                 <div class="home-stories-slide-info__author">
-                  <img
+                  <g-image
                     class="home-stories-slide-info__author-avatar"
                     src="@/assets/images/stories-avatar.png"
                     alt=""

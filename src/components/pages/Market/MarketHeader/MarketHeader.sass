@@ -10,6 +10,9 @@
   &-info
     position: relative
 
+    &--mobile
+      display: none
+
     &__marker
       position: absolute
       display: block
@@ -81,6 +84,9 @@
 
 
         .base-select
+          &__no-results
+            color: rgba($c-white, 0.6)
+
           &__content
             background-color: $c-dark-bg
             border: 2px solid rgba($c-white, 0.6)
@@ -160,7 +166,17 @@
     .main-header__info
       padding: 0
 
+    .main-header__content
+      margin: 0 auto
+
     &-info
+      &--desktop
+        display: none
+
+      &--mobile
+        display: block
+        margin: 0 0 3rem 0
+
       &__map
         width: 100%
 

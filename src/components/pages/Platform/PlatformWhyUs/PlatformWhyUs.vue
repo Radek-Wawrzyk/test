@@ -31,7 +31,7 @@
                 <h4 class="platform-why-question__heading">
                   {{ item.name }}
                 </h4>
-                <img
+                <g-image
                   src="@/assets/icons/chevron.svg"
                   alt=""
                   class="platform-why-question__icon"
@@ -65,7 +65,7 @@
                 <h4 class="platform-why-question__heading">
                   {{ item.name }}
                 </h4>
-                <img
+                <g-image
                   src="@/assets/icons/chevron.svg"
                   alt=""
                   class="platform-why-question__icon"
@@ -100,7 +100,7 @@
               <h4 class="platform-why-question__heading">
                 {{ item.name }}
               </h4>
-              <img
+              <g-image
                 src="@/assets/icons/chevron.svg"
                 alt=""
                 class="platform-why-question__icon"

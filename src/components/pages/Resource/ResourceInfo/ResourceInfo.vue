@@ -3,7 +3,20 @@
     <div class="container container--big">
       <div class="resource-info__inner">
         <div class="resource-info__mobile">
-          <h3 class="resource-info__mobile-heading">
+          <mobile-resource-filtration
+            heading="Assets"
+            :data="assets"
+            v-model="activeAsset"
+          />
+
+          <mobile-resource-filtration
+            heading="Topics"
+            :data="topics"
+            v-model="activeTopic"
+          />
+
+
+          <!-- <h3 class="resource-info__mobile-heading">
             Assets
           </h3>
           <mobile-tabs
@@ -20,8 +33,9 @@
             mode="light"
             :data="topics"
             class="resource-info__mobile-tabs"
-          />
+          /> -->
         </div>
+
         <div class="resource-info__tabs">
           <div class="resource-info__tabs-item">
             <h3 class="resource-info__tabs-heading">

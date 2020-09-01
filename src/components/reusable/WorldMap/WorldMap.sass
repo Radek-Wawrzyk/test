@@ -64,6 +64,9 @@
       background: $c-brand-yellow
       border-radius: $border-radius
 
+      &--mobile
+        display: none
+
     &-dot
       position: absolute
       left: 50%
@@ -74,3 +77,11 @@
       border-radius: 50%
       border: 2px solid $c-white
       background-color: $c-brand-yellow
+
+// Media
+
+@media screen and (max-width: 640px)
+  .world-map
+    &__marker
+      &-label
+        display: none

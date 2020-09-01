@@ -4,7 +4,7 @@
       heading="Solution Available on Every Continent"
       text="Sign up to be notified as soon as we launch in your country"
     >
-      <div class="market-header-info" slot="info">
+      <div class="market-header-info market-header-info--desktop" slot="info">
         <g-image
           src="@/assets/images/market.svg"
           class="market-header-info__map"
@@ -24,6 +24,25 @@
         />
       </div>
       <div class="market-header-content" slot="content">
+        <div class="market-header-info market-header-info--mobile">
+          <g-image
+            src="@/assets/images/market.svg"
+            class="market-header-info__map"
+            alt
+          />
+          <div
+            class="market-header-info__marker"
+            :class="[
+              `market-header-info__marker--${index + 1}`
+            ]"
+            v-for="(mark, index) in marks"
+            :key="mark.id"
+            :style="{
+              left: `${mark.left}%`,
+              top: `${mark.top}%`
+            }"
+          />
+        </div>
         <validation-observer
           tag="form"
           ref="market"

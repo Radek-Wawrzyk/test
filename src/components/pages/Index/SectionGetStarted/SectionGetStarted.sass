@@ -3,12 +3,15 @@
   padding: 9rem 0
 
   &__content
-    margin: 3.5rem 0 5.6rem 0
     text-align: center
+    margin: 4rem 0
 
     &-inner
       width: auto
       display: inline-block
+
+    &-video
+      width: 100%
 
   &-tab
     position: relative
@@ -42,10 +45,13 @@
       line-height: 1.75rem
       color: $text-color--medium;
 
-@media screen and (max-width: 1024px)
-  .get-started__content
-    margin: 2rem 0 0 0
-
 @media screen and (max-width: 640px)
   .get-started
     padding: 5rem 0
+
+@media screen and (max-width: 768px)
+  .get-started
+    padding: 5rem 0
+
+    &__content
+      margin: 0

@@ -132,6 +132,11 @@ export default {
       item.node.menuItems.length > 1 ? item.node.status = false : false;
     });
 
+    menu[0].node.menuItems.unshift({
+      label: 'Platform Overview',
+      url: '/platform',
+    });
+
     this.menu = menu;
   },
 };

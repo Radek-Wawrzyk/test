@@ -22,14 +22,19 @@
                 v-if="activeTab === 'brands'"
                 key="brands"
               >
-                <img
+                <video
+                  v-video-autoplay
+                  key="collection"
+                  muted
+                  width="auto"
+                  height="auto"
                   class="platform-features-content__img"
-                  alt
-                  src="@/assets/images/platform/keyFeatures.png"
-                />
+                >
+                  <source src="@/assets/videos/platform/feature-1.mp4" type="video/mp4" />
+                </video>
                 <div class="platform-features-content__tile">
                   <figure class="platform-features-content__tile-icon">
-                    <!-- <img
+                    <!-- <g-image
                       class="features-tile__icon-inner"
                       alt
                       src="@/assets/icons/features-icon.svg"
@@ -49,7 +54,7 @@
                         class="platform-features-content__tile-features"
                       >
                         <li class="platform-features-content__tile-features-item">
-                          <img
+                          <g-image
                             class="platform-features-content__tile-features-icon"
                             alt
                             src="@/assets/icons/benefits-check.svg"
@@ -69,14 +74,19 @@
                 v-if="activeTab === 'marketing'"
                 key="marketing"
               >
-                <img
+                <video
+                  v-video-autoplay
+                  key="collection"
+                  muted
+                  width="auto"
+                  height="auto"
                   class="platform-features-content__img"
-                  alt
-                  src="@/assets/images/platform/keyFeatures.png"
-                />
+                >
+                  <source src="@/assets/videos/platform/feature-1.mp4" type="video/mp4" />
+                </video>
                 <div class="platform-features-content__tile">
                   <figure class="platform-features-content__tile-icon">
-                    <!-- <img
+                    <!-- <g-image
                       class="features-tile__icon-inner"
                       alt
                       src="@/assets/icons/features-icon.svg"
@@ -96,7 +106,7 @@
                         class="platform-features-content__tile-features"
                       >
                         <li class="platform-features-content__tile-features-item">
-                          <img
+                          <g-image
                             class="platform-features-content__tile-features-icon"
                             alt
                             src="@/assets/icons/benefits-check.svg"
@@ -116,14 +126,19 @@
                 v-if="activeTab === 'product'"
                 key="product"
               >
-                <img
+                <video
+                  v-video-autoplay
+                  key="collection"
+                  muted
+                  width="auto"
+                  height="auto"
                   class="platform-features-content__img"
-                  alt
-                  src="@/assets/images/platform/keyFeatures.png"
-                />
+                >
+                  <source src="@/assets/videos/platform/feature-1.mp4" type="video/mp4" />
+                </video>
                 <div class="platform-features-content__tile">
                   <figure class="platform-features-content__tile-icon">
-                    <!-- <img
+                    <!-- <g-image
                       class="features-tile__icon-inner"
                       alt
                       src="@/assets/icons/features-icon.svg"
@@ -143,7 +158,7 @@
                         class="platform-features-content__tile-features"
                       >
                         <li class="platform-features-content__tile-features-item">
-                          <img
+                          <g-image
                             class="platform-features-content__tile-features-icon"
                             alt
                             src="@/assets/icons/benefits-check.svg"
@@ -163,14 +178,19 @@
                 v-if="activeTab === 'bi'"
                 key="bi"
               >
-                <img
+                <video
+                  v-video-autoplay
+                  key="collection"
+                  muted
+                  width="auto"
+                  height="auto"
                   class="platform-features-content__img"
-                  alt
-                  src="@/assets/images/platform/keyFeatures.png"
-                />
+                >
+                  <source src="@/assets/videos/platform/feature-1.mp4" type="video/mp4" />
+                </video>
                 <div class="platform-features-content__tile">
                   <figure class="platform-features-content__tile-icon">
-                    <!-- <img
+                    <!-- <g-image
                       class="features-tile__icon-inner"
                       alt
                       src="@/assets/icons/features-icon.svg"
@@ -190,7 +210,7 @@
                         class="platform-features-content__tile-features"
                       >
                         <li class="platform-features-content__tile-features-item">
-                          <img
+                          <g-image
                             class="platform-features-content__tile-features-icon"
                             alt
                             src="@/assets/icons/benefits-check.svg"
@@ -233,14 +253,20 @@
                 v-if="activeTab === 'brands'"
                 key="brands"
               >
-                <img
+                <video
+                  v-video-autoplay
+                  key="collection"
+                  muted
+                  width="auto"
+                  height="auto"
                   class="platform-features-content__img"
-                  alt
-                  src="@/assets/images/platform/keyFeatures.png"
-                />
+                >
+                  <source src="@/assets/videos/platform/feature-1.mp4" type="video/mp4" />
+                </video>
+
                 <div class="platform-features-content__tile">
                   <figure class="platform-features-content__tile-icon">
-                    <!-- <img
+                    <!-- <g-image
                       class="features-tile__icon-inner"
                       alt
                       src="@/assets/icons/features-icon.svg"
@@ -260,7 +286,7 @@
                         class="platform-features-content__tile-features"
                       >
                         <li class="platform-features-content__tile-features-item">
-                          <img
+                          <g-image
                             class="platform-features-content__tile-features-icon"
                             alt
                             src="@/assets/icons/benefits-check.svg"
@@ -280,14 +306,19 @@
                 v-if="activeTab === 'marketing'"
                 key="marketing"
               >
-                <img
+                <video
+                  v-video-autoplay
+                  key="collection"
+                  muted
+                  width="auto"
+                  height="auto"
                   class="platform-features-content__img"
-                  alt
-                  src="@/assets/images/platform/keyFeatures.png"
-                />
+                >
+                  <source src="@/assets/videos/platform/feature-1.mp4" type="video/mp4" />
+                </video>
                 <div class="platform-features-content__tile">
                   <figure class="platform-features-content__tile-icon">
-                    <!-- <img
+                    <!-- <g-image
                       class="features-tile__icon-inner"
                       alt
                       src="@/assets/icons/features-icon.svg"
@@ -307,7 +338,7 @@
                         class="platform-features-content__tile-features"
                       >
                         <li class="platform-features-content__tile-features-item">
-                          <img
+                          <g-image
                             class="platform-features-content__tile-features-icon"
                             alt
                             src="@/assets/icons/benefits-check.svg"
@@ -327,14 +358,19 @@
                 v-if="activeTab === 'product'"
                 key="product"
               >
-                <img
+                <video
+                  v-video-autoplay
+                  key="collection"
+                  muted
+                  width="auto"
+                  height="auto"
                   class="platform-features-content__img"
-                  alt
-                  src="@/assets/images/platform/keyFeatures.png"
-                />
+                >
+                  <source src="@/assets/videos/platform/feature-1.mp4" type="video/mp4" />
+                </video>
                 <div class="platform-features-content__tile">
                   <figure class="platform-features-content__tile-icon">
-                    <!-- <img
+                    <!-- <g-image
                       class="features-tile__icon-inner"
                       alt
                       src="@/assets/icons/features-icon.svg"
@@ -354,7 +390,7 @@
                         class="platform-features-content__tile-features"
                       >
                         <li class="platform-features-content__tile-features-item">
-                          <img
+                          <g-image
                             class="platform-features-content__tile-features-icon"
                             alt
                             src="@/assets/icons/benefits-check.svg"
@@ -374,14 +410,19 @@
                 v-if="activeTab === 'bi'"
                 key="bi"
               >
-                <img
+                <video
+                  v-video-autoplay
+                  key="collection"
+                  muted
+                  width="auto"
+                  height="auto"
                   class="platform-features-content__img"
-                  alt
-                  src="@/assets/images/platform/keyFeatures.png"
-                />
+                >
+                  <source src="@/assets/videos/platform/feature-1.mp4" type="video/mp4" />
+                </video>
                 <div class="platform-features-content__tile">
                   <figure class="platform-features-content__tile-icon">
-                    <!-- <img
+                    <!-- <g-image
                       class="features-tile__icon-inner"
                       alt
                       src="@/assets/icons/features-icon.svg"
@@ -401,7 +442,7 @@
                         class="platform-features-content__tile-features"
                       >
                         <li class="platform-features-content__tile-features-item">
-                          <img
+                          <g-image
                             class="platform-features-content__tile-features-icon"
                             alt
                             src="@/assets/icons/benefits-check.svg"
