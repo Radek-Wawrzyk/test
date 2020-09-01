@@ -58,33 +58,43 @@
             {{ item.text }}
           </p>
         </base-tab-item>
+
         <template slot="content">
           <main class="get-started__content">
-            <transition name="fade" mode="out-in">
-              <video v-if="activeTab === 'sign'" v-video-autoplay
-                key="sign" muted
+            <transition-group name="fade" mode="out-in">
+              <video
+                v-show="activeTab === 'sign'"
+                v-video-autoplay
+                key="sign"
+                muted
                 width="auto" height="500"
                 class="get-started__content-video"
               >
                 <source src="@/assets/videos/home/get-started-1.mp4" type="video/mp4" />
               </video>
 
-              <video v-if="activeTab === 'set'" v-video-autoplay
-                key="set" muted
+              <video
+                v-show="activeTab === 'set'"
+                v-video-autoplay
+                key="set"
+                muted
                 width="auto" height="500"
                 class="get-started__content-video"
               >
                 <source src="@/assets/videos/home/get-started-2.mp4" type="video/mp4" />
               </video>
 
-              <video v-if="activeTab === 'start'" v-video-autoplay
-                key="start" muted
+              <video
+                v-show="activeTab === 'start'"
+                v-video-autoplay
+                key="start"
+                muted
                 width="auto" height="500"
                 class="get-started__content-video"
               >
                 <source src="@/assets/videos/home/get-started-3.mp4" type="video/mp4" />
               </video>
-            </transition>
+            </transition-group>
           </main>
         </template>
       </base-tabs>
